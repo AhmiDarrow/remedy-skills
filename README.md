@@ -11,7 +11,7 @@ Official packs are **installable workflows** (not stubs): each `skills/*/SKILL.m
 
 ### Skills in this library (**280**)
 
-_Auto-updated 2026-07-26 22:56 UTC from skill packs. Full detail: [SKILLS.md](./SKILLS.md)._
+_Auto-updated 2026-07-26 22:57 UTC from skill packs. Full detail: [SKILLS.md](./SKILLS.md)._
 
 | Area | Count | Sample skills |
 |------|------:|---------------|
