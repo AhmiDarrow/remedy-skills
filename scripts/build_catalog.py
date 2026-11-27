@@ -96,7 +96,7 @@ def build_catalog(
                 "reviews_count": 0,
                 "updated_at": now,
                 "published_at": now,
-                "compatible_remedy": [">=0.15.0"],
+                "compatible_remedy": [">=2.0.0"],
                 "security_flags": flags,
                 "status": "published",
             }
@@ -127,7 +127,7 @@ def main() -> None:
         release_tag=args.release_tag,
         write_dist=not args.no_dist,
     )
-    args.output.write_text(json.dumps(cat, indent=2) + "\n", encoding="utf-8")
+    args.output.write_text(json.dumps(cat, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"Wrote {args.output} ({len(cat['skills'])} skills)")
     if not args.skip_docs:
         import subprocess

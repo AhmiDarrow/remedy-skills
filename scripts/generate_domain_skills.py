@@ -49,7 +49,7 @@ def write_skill(name: str, desc: str, tags: list[str], tools: list[str], body: s
     title = name.replace("-", " ").title()
     content = f"""---
 name: {name}
-version: 1.0.0
+version: 1.0.1
 description: >
   {desc}
 author: Remedy Official
@@ -77,7 +77,7 @@ metadata:
 - Report commands and outcomes; do not invent results.
 - Ask before destructive, paid, or irreversible actions.
 - Never print or commit secrets, tokens, or private personal data.
-- Use generic tool names only (shell, file read/write, image tools already in Remedy).
+- Use Remedy's tool names (`read`, `write`, `bash`); do not assume a tool that is not in your tool list.
 
 ## Done when
 The user goal is met, or you list concrete blockers and the next safe step.
@@ -95,7 +95,7 @@ GAMING = [
         "game-design-document",
         "Draft or update a game design document: pillars, loop, progression, risk, and vertical slice scope.",
         ["gaming", "design", "docs"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## When to use
 New game concept, pitch, or reconciling a messy design.
@@ -117,7 +117,7 @@ A teammate can build against the slice without guessing pillars.
         "game-loop-design",
         "Design or tighten a core gameplay loop with hooks, rewards, and failure states.",
         ["gaming", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. State the player goal in one line.
@@ -135,7 +135,7 @@ Feature lists without a loop diagram or verb table.
         "game-economy-balance",
         "Balance a game economy: sinks/faucets, inflation risks, and progression pacing.",
         ["gaming", "design", "systems"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Inventory currencies and items (sources and sinks).
@@ -153,7 +153,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "quest-design",
         "Design quests/missions with objectives, gates, rewards, and failure paths.",
         ["gaming", "narrative", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Quest goal and why the player cares.
@@ -169,7 +169,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "level-design-brief",
         "Produce a level design brief: layout goals, encounters, pacing, and greybox checklist.",
         ["gaming", "level-design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Level fantasy and teaching goal (what skill is taught).
@@ -184,7 +184,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "boss-fight-design",
         "Design a boss encounter with phases, tells, accessibility options, and rewards.",
         ["gaming", "combat", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Boss fantasy and role in progression.
@@ -200,7 +200,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "combat-feel-tuning",
         "Tune combat feel: input buffer, hitstop, feedback, and readability without engine-specific jargon lock-in.",
         ["gaming", "combat"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. List player attacks and recovery frames (or timing numbers in data).
@@ -215,7 +215,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-ai-behavior",
         "Design enemy or NPC AI behaviors: states, perception, difficulty layers.",
         ["gaming", "ai", "systems"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Roles (rusher, support, sniper, civilian).
@@ -230,7 +230,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "progression-curve",
         "Design player progression curves: XP, unlocks, soft gates, and catch-up.",
         ["gaming", "systems"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Time-to-first-reward and time-to-mastery targets.
@@ -245,7 +245,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "loot-table-design",
         "Design loot tables with drop rates, pity systems, and economy safety.",
         ["gaming", "systems"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Rarity tiers and intended drop feel.
@@ -260,7 +260,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "multiplayer-session-design",
         "Design multiplayer session flow: matchmaking intent, disconnects, host migration, fairness.",
         ["gaming", "multiplayer"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Session model (lobby, drop-in, async).
@@ -275,7 +275,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-save-system",
         "Design save/load: slots, versioning, cloud caveats, corruption recovery.",
         ["gaming", "systems"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. What state must persist.
@@ -290,7 +290,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-telemetry-events",
         "Define gameplay telemetry events for funnels, balance, and crash context (privacy-aware).",
         ["gaming", "ops", "privacy"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Questions design needs answered (drop-off, weapon usage, crash level).
@@ -305,7 +305,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-accessibility",
         "Apply game accessibility: colorblind, subtitle, input remapping, difficulty assists.",
         ["gaming", "a11y"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Checklist
 1. Color is not the only signal.
@@ -320,7 +320,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-localization-prep",
         "Prepare game strings for localization: keys, variables, length expansion, voice notes.",
         ["gaming", "i18n"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Extract player-facing strings to keys.
@@ -335,7 +335,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-audio-direction",
         "Write audio direction: music intensity layers, SFX categories, mix priorities, implementation checklist.",
         ["gaming", "audio", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Emotional targets per area/combat state.
@@ -350,7 +350,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-vfx-checklist",
         "Define VFX readability and performance budgets for abilities and environments.",
         ["gaming", "art", "perf"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Gameplay readability first (silhouettes, contrast).
@@ -365,7 +365,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-ui-hud",
         "Design HUD/information architecture: diegetic vs non-diegetic, clutter budget, combat readability.",
         ["gaming", "ui", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Critical info always visible vs on demand.
@@ -380,7 +380,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "playtest-protocol",
         "Run a structured playtest: goals, tasks, observation notes, and debrief actions.",
         ["gaming", "research"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Hypotheses (what you fear is broken).
@@ -395,7 +395,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-build-checklist",
         "Pre-ship game build checklist: content locks, known issues, platform cert hygiene (generic).",
         ["gaming", "release"],
-        ["file_read", "bash_exec"],
+        ["read", "bash"],
         """
 ## Checklist
 1. Version/build number stamped.
@@ -412,7 +412,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-input-mapping",
         "Design input mapping for keyboard/mouse/gamepad with conflicts and rebinding.",
         ["gaming", "input"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Action list (not raw keys).
@@ -427,7 +427,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-difficulty-design",
         "Design difficulty modes and dynamic assists without breaking the fantasy.",
         ["gaming", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. What “skill” means in this game.
@@ -441,7 +441,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-tutorial-flow",
         "Design an onboarding/tutorial that teaches verbs in context with skip options.",
         ["gaming", "ux", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Core verbs to teach (max ~5 early).
@@ -456,7 +456,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-narrative-bible",
         "Create a narrative bible: world rules, characters, tone, continuity constraints.",
         ["gaming", "narrative"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. World premise and hard rules (what cannot break).
@@ -471,7 +471,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-dialogue-pass",
         "Write or edit game dialogue for voice, subtext, length budgets, and VO notes.",
         ["gaming", "narrative", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Character voice samples.
@@ -486,7 +486,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-bug-triage",
         "Triage gameplay bugs by repro, severity, blocker status, and regression risk.",
         ["gaming", "qa"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Repro steps and build number.
@@ -501,7 +501,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-perf-budget",
         "Set performance budgets: frame time, memory, streaming, and content limits.",
         ["gaming", "perf"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Target platforms and frame rates.
@@ -516,7 +516,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-netcode-notes",
         "Document netcode approach at a design level: prediction, reconciliation, lag compensation caveats.",
         ["gaming", "multiplayer"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Genre constraints (twitchy vs eventual).
@@ -531,7 +531,7 @@ Economy notes + patch suggestions for numbers files or configs.
         "game-liveops-calendar",
         "Plan live-ops events: cadence, rewards, economy impact, and rollback.",
         ["gaming", "liveops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Cadence (weekly/seasonal).
@@ -552,7 +552,7 @@ DESIGN = [
         "design-brief",
         "Write a design brief: problem, audience, constraints, success metrics, deliverables.",
         ["design", "product"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Problem statement and non-goals.
@@ -567,7 +567,7 @@ DESIGN = [
         "visual-hierarchy-pass",
         "Improve visual hierarchy on a screen: type scale, weight, spacing, focal point.",
         ["design", "ui"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Identify primary action and primary content.
@@ -581,7 +581,7 @@ DESIGN = [
         "color-system",
         "Define or refine a color system: roles (bg, text, accent, danger), contrast, dark mode.",
         ["design", "ui"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Roles not raw swatches only.
@@ -596,7 +596,7 @@ DESIGN = [
         "typography-system",
         "Set type scale, line height, and pairing rules for UI or editorial layouts.",
         ["design", "ui"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Base size and scale ratio.
@@ -610,7 +610,7 @@ DESIGN = [
         "spacing-layout-grid",
         "Define spacing scale and layout grid for consistent composition.",
         ["design", "ui"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Base unit (4/8).
@@ -624,7 +624,7 @@ DESIGN = [
         "iconography-guide",
         "Create icon rules: optical size, stroke, metaphor consistency, accessibility.",
         ["design", "ui"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Style (outline/filled) and stroke weight.
@@ -638,7 +638,7 @@ DESIGN = [
         "design-system-audit",
         "Audit UI against an existing design system: drift, one-offs, missing components.",
         ["design", "ui"],
-        ["file_read"],
+        ["read"],
         """
 ## Steps
 1. Inventory components in code vs design docs.
@@ -652,7 +652,7 @@ DESIGN = [
         "wireframe-flow",
         "Produce low-fidelity wireframe flows for a user task (text or simple structure).",
         ["design", "ux"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. User goal and entry points.
@@ -666,7 +666,7 @@ DESIGN = [
         "ux-copy-microcopy",
         "Write UI microcopy: buttons, errors, empty states, confirmations—clear and human.",
         ["design", "writing", "ux"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Inventory strings on the flow.
@@ -681,7 +681,7 @@ DESIGN = [
         "user-journey-map",
         "Map a user journey: stages, emotions, pain points, opportunities.",
         ["design", "research"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Persona and scenario.
@@ -695,7 +695,7 @@ DESIGN = [
         "persona-profile",
         "Build research-backed personas (or proto-personas) with goals, frustrations, contexts.",
         ["design", "research"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Evidence sources (interviews, tickets, analytics)—label assumptions.
@@ -709,7 +709,7 @@ DESIGN = [
         "usability-test-plan",
         "Plan a usability test: tasks, metrics, script, and synthesis template.",
         ["design", "research"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Research questions.
@@ -724,7 +724,7 @@ DESIGN = [
         "information-architecture",
         "Organize information architecture: nav, labels, findability, card sorting notes.",
         ["design", "ux"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Inventory content/features.
@@ -738,7 +738,7 @@ DESIGN = [
         "interaction-states",
         "Specify full interaction states for components: default, hover, focus, active, disabled, error, loading.",
         ["design", "ui"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Component list.
@@ -752,7 +752,7 @@ DESIGN = [
         "motion-design-spec",
         "Specify motion: purpose, duration, easing, reduced-motion fallback.",
         ["design", "ui"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Motion purpose (orientation, feedback—not decoration only).
@@ -766,7 +766,7 @@ DESIGN = [
         "brand-voice-guide",
         "Write a brand voice guide: principles, tone spectrum, examples do/don't.",
         ["design", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Brand personality adjectives.
@@ -780,7 +780,7 @@ DESIGN = [
         "logo-usage-rules",
         "Document logo usage: clear space, min size, on dark/light, misuse examples.",
         ["design", "brand"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Primary/secondary marks.
@@ -794,7 +794,7 @@ DESIGN = [
         "design-critique-session",
         "Facilitate a design critique: goals, evidence, actionable feedback, decisions.",
         ["design", "process"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Presenter states goal and constraints (2 min).
@@ -808,7 +808,7 @@ DESIGN = [
         "moodboard-direction",
         "Assemble a written moodboard direction: themes, keywords, references categories (no brand copying).",
         ["design", "creative"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Project emotion and audience.
@@ -822,7 +822,7 @@ DESIGN = [
         "illustration-brief",
         "Write an illustration brief: story, style constraints, sizes, deliverables.",
         ["design", "art"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Narrative purpose of the image.
@@ -836,7 +836,7 @@ DESIGN = [
         "photo-art-direction",
         "Art-direct photoshoots or stock selection: subject, lighting, crop, usage rights checklist.",
         ["design", "content"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Message and emotion.
@@ -850,7 +850,7 @@ DESIGN = [
         "print-layout-basics",
         "Lay out print-ready pages: margins, bleed, hierarchy, export checklist.",
         ["design", "print"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Page size and bleed/safe margins.
@@ -864,7 +864,7 @@ DESIGN = [
         "presentation-deck-structure",
         "Structure a presentation deck: story arc, slide budget, speaker notes.",
         ["design", "content", "speaking"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Audience and decision asked.
@@ -879,7 +879,7 @@ DESIGN = [
         "dashboard-ui-design",
         "Design dashboards: metrics hierarchy, density, empty/loading/error, drill-down.",
         ["design", "ui", "data"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Primary questions the dashboard answers.
@@ -894,7 +894,7 @@ DESIGN = [
         "onboarding-ui-flow",
         "Design product onboarding UI: progressive disclosure, skip, value moments.",
         ["design", "ux", "product"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Activation moment definition.
@@ -909,7 +909,7 @@ DESIGN = [
         "error-state-design",
         "Design error and recovery UI that is calm, specific, and actionable.",
         ["design", "ux"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Error categories (user, network, server, permission).
@@ -923,7 +923,7 @@ DESIGN = [
         "design-handoff",
         "Prepare design-to-engineering handoff: specs, assets, behavior notes, open questions.",
         ["design", "process"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Final flows linked.
@@ -938,7 +938,7 @@ DESIGN = [
         "a11y-design-review",
         "Design-side accessibility review: contrast, focus order, targets, motion, content structure.",
         ["design", "a11y"],
-        ["file_read"],
+        ["read"],
         """
 ## Checklist
 1. Text/icon contrast.
@@ -953,7 +953,7 @@ DESIGN = [
         "responsive-design-spec",
         "Specify responsive behavior across breakpoints: reflow, collapse, priority content.",
         ["design", "ui"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Breakpoint definitions used by the project.
@@ -967,7 +967,7 @@ DESIGN = [
         "data-viz-design",
         "Design charts/graphs for honesty: scales, color, annotations, accessibility.",
         ["design", "data"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Question the chart answers.
@@ -988,7 +988,7 @@ CONTENT = [
         "content-strategy",
         "Draft a content strategy: pillars, channels, cadence, voice, measurement.",
         ["content", "marketing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Business goal and audience.
@@ -1003,7 +1003,7 @@ CONTENT = [
         "editorial-calendar",
         "Build an editorial calendar with themes, owners, statuses, and deadlines.",
         ["content", "planning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Time horizon (month/quarter).
@@ -1018,7 +1018,7 @@ CONTENT = [
         "blog-post-outline",
         "Outline a blog post: angle, outline, sources, CTA, SEO basics without keyword stuffing.",
         ["content", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Reader problem and promise.
@@ -1033,7 +1033,7 @@ CONTENT = [
         "blog-post-draft",
         "Write a full blog draft from an outline with scannable structure and clear CTA.",
         ["content", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Hook in first screen.
@@ -1048,7 +1048,7 @@ CONTENT = [
         "social-post-pack",
         "Create a pack of social posts for one announcement across lengths and CTAs.",
         ["content", "social"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Core message (one sentence).
@@ -1063,7 +1063,7 @@ CONTENT = [
         "newsletter-issue",
         "Plan and draft a newsletter issue: sections, links, subject lines, preview text.",
         ["content", "email"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Goal of this send.
@@ -1078,7 +1078,7 @@ CONTENT = [
         "video-script",
         "Write a video script with visual column, VO/dialogue, timing, and B-roll notes.",
         ["content", "video"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Length target and platform constraints (generic).
@@ -1093,7 +1093,7 @@ CONTENT = [
         "video-edit-checklist",
         "Checklist for editing a video cut: pacing, audio, captions, exports.",
         ["content", "video"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Checklist
 1. Story cut before polish.
@@ -1109,7 +1109,7 @@ CONTENT = [
         "podcast-episode-plan",
         "Plan a podcast episode: cold open, segments, guests prep, show notes.",
         ["content", "audio"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Episode thesis.
@@ -1124,7 +1124,7 @@ CONTENT = [
         "script-to-storyboard",
         "Turn a script into a shot list / storyboard frames description.",
         ["content", "video", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Break script into shots.
@@ -1138,7 +1138,7 @@ CONTENT = [
         "press-release",
         "Draft a press release: headline, lede, body, boilerplate, quotes, links.",
         ["content", "comms"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Newsworthy angle (what changed for whom).
@@ -1154,7 +1154,7 @@ CONTENT = [
         "case-study-write",
         "Write a case study: problem, approach, results, proof, lessons.",
         ["content", "marketing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Customer context (permissions!).
@@ -1169,7 +1169,7 @@ CONTENT = [
         "documentation-tutorial",
         "Write a task-oriented tutorial with prerequisites, steps, verification, troubleshooting.",
         ["content", "docs"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Goal statement (“By the end you will…” ).
@@ -1184,7 +1184,7 @@ CONTENT = [
         "release-announcement",
         "Write a product release announcement for blog/email/in-app.",
         ["content", "product"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. User benefits first (not feature dump).
@@ -1199,7 +1199,7 @@ CONTENT = [
         "seo-content-brief",
         "Create an SEO content brief: intent, outline, questions to answer, internal links (no stuffing).",
         ["content", "seo"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Search intent (learn/compare/buy).
@@ -1214,7 +1214,7 @@ CONTENT = [
         "content-repurpose",
         "Repurpose one long asset into multiple channel formats without sounding duplicate.",
         ["content", "marketing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Source asset and core ideas.
@@ -1228,7 +1228,7 @@ CONTENT = [
         "interview-questions",
         "Prepare interview questions for customers, candidates, or experts with follow-ups.",
         ["content", "research"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Interview goal.
@@ -1242,7 +1242,7 @@ CONTENT = [
         "transcript-cleanup",
         "Clean a transcript: speakers, paragraphs, filler removal, summary bullets.",
         ["content", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Identify speakers.
@@ -1257,7 +1257,7 @@ CONTENT = [
         "style-guide-writing",
         "Create a writing style guide: voice, grammar choices, inclusive language, examples.",
         ["content", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Voice principles.
@@ -1272,7 +1272,7 @@ CONTENT = [
         "fact-check-pass",
         "Fact-check a draft: claims, numbers, links, attribution, uncertainty language.",
         ["content", "quality"],
-        ["file_read", "web_search"],
+        ["read", "web.search"],
         """
 ## Steps
 1. Extract factual claims.
@@ -1287,7 +1287,7 @@ CONTENT = [
         "content-edit-pass",
         "Edit for clarity, structure, and brevity while preserving author voice.",
         ["content", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Structure pass (order, headings).
@@ -1301,7 +1301,7 @@ CONTENT = [
         "headline-options",
         "Generate headline options optimized for clarity and curiosity without clickbait.",
         ["content", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Core promise of the piece.
@@ -1314,7 +1314,7 @@ CONTENT = [
         "call-to-action-copy",
         "Write CTAs matched to funnel stage with friction-aware wording.",
         ["content", "ux", "marketing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Desired action and stage (aware/consider/convert).
@@ -1328,7 +1328,7 @@ CONTENT = [
         "landing-page-copy",
         "Write landing page copy: hero, proof, benefits, objections, CTA.",
         ["content", "marketing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Offer and audience.
@@ -1343,7 +1343,7 @@ CONTENT = [
         "faq-generation",
         "Generate FAQs from product behavior, support tickets, and objections.",
         ["content", "support"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Gather real questions (tickets, sales, docs gaps).
@@ -1357,7 +1357,7 @@ CONTENT = [
         "changelog-user-facing",
         "Turn engineering notes into user-facing release notes people understand.",
         ["content", "product"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Read commits/PRs/changelog drafts.
@@ -1371,7 +1371,7 @@ CONTENT = [
         "community-guidelines",
         "Draft community guidelines: values, allowed/not allowed, enforcement ladder.",
         ["content", "community"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Values and scope (where rules apply).
@@ -1386,7 +1386,7 @@ CONTENT = [
         "content-localization",
         "Prepare content for localization: freeze strings, context notes, do-not-translate list.",
         ["content", "i18n"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Identify freezable source language.
@@ -1400,7 +1400,7 @@ CONTENT = [
         "thumbnail-concept",
         "Concept thumbnails: focal subject, text overlay limits, contrast, A/B ideas.",
         ["content", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. One clear subject.
@@ -1414,7 +1414,7 @@ CONTENT = [
         "content-audit",
         "Audit existing content: freshness, accuracy, duplicates, SEO cannibalization, prune plan.",
         ["content", "quality"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Inventory URLs/docs.
@@ -1434,7 +1434,7 @@ PERSONAL = [
         "daily-planning",
         "Build a realistic daily plan from priorities, calendar constraints, and energy.",
         ["personal", "productivity"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. List must-do / should-do / nice-to-do.
@@ -1448,7 +1448,7 @@ PERSONAL = [
         "weekly-review",
         "Run a weekly review: wins, open loops, priorities, calendar look-ahead.",
         ["personal", "productivity"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Wins and lessons.
@@ -1463,7 +1463,7 @@ PERSONAL = [
         "priority-matrix",
         "Sort tasks with urgency/importance and recommend what to defer or drop.",
         ["personal", "productivity"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Capture all tasks.
@@ -1477,7 +1477,7 @@ PERSONAL = [
         "meeting-agenda",
         "Create a meeting agenda with purpose, topics, times, and decisions needed.",
         ["personal", "work"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Meeting purpose (decide/inform/brainstorm).
@@ -1491,7 +1491,7 @@ PERSONAL = [
         "meeting-notes",
         "Turn discussion into structured notes: decisions, actions, owners, dates.",
         ["personal", "work"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Context and attendees.
@@ -1505,7 +1505,7 @@ PERSONAL = [
         "email-draft",
         "Draft clear emails: purpose first, short paragraphs, explicit ask, tone control.",
         ["personal", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Goal and audience.
@@ -1520,7 +1520,7 @@ PERSONAL = [
         "difficult-conversation",
         "Prepare a difficult conversation: goals, script, boundaries, outcomes.",
         ["personal", "communication"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Desired outcome and non-negotiables.
@@ -1535,7 +1535,7 @@ PERSONAL = [
         "decision-log-personal",
         "Log a personal or work decision with options, criteria, choice, review date.",
         ["personal", "decisions"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Decision statement.
@@ -1549,7 +1549,7 @@ PERSONAL = [
         "habit-design",
         "Design a habit loop: cue, routine, reward, tracking, restart plan.",
         ["personal", "habits"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Tiny starting version.
@@ -1563,7 +1563,7 @@ PERSONAL = [
         "goal-breakdown",
         "Break a large goal into milestones, weekly outcomes, and first concrete actions.",
         ["personal", "planning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Goal with deadline and why.
@@ -1578,7 +1578,7 @@ PERSONAL = [
         "travel-itinerary",
         "Build a travel itinerary: logistics, buffers, offline notes, packing constraints.",
         ["personal", "travel"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Dates, travelers, budget band.
@@ -1593,7 +1593,7 @@ PERSONAL = [
         "packing-list",
         "Generate a packing list by trip type, climate, and activities.",
         ["personal", "travel"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Climate and activities.
@@ -1607,7 +1607,7 @@ PERSONAL = [
         "budget-snapshot",
         "Create a simple budget snapshot: income, fixed costs, variable, goals (no bank logins).",
         ["personal", "finance"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. User-provided numbers only (never scrape banks).
@@ -1621,7 +1621,7 @@ PERSONAL = [
         "expense-categorize",
         "Categorize a list of expenses and summarize by category with outliers.",
         ["personal", "finance"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Accept CSV/list from user.
@@ -1635,7 +1635,7 @@ PERSONAL = [
         "recipe-plan-meals",
         "Plan meals for N days given constraints (time, diet, servings) with shopping list.",
         ["personal", "food"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Constraints and preferences.
@@ -1649,7 +1649,7 @@ PERSONAL = [
         "workout-plan-basic",
         "Draft a basic workout plan with warm-up, main work, recovery (not medical advice).",
         ["personal", "fitness"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Disclaimer
 Not medical advice; user should consult professionals for health conditions.
@@ -1667,7 +1667,7 @@ Not medical advice; user should consult professionals for health conditions.
         "sleep-routine",
         "Design a sleep routine: wind-down, environment, schedule consistency (general wellness).",
         ["personal", "wellness"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Disclaimer
 General wellness only—not medical advice.
@@ -1684,7 +1684,7 @@ General wellness only—not medical advice.
         "reading-notes",
         "Produce structured reading notes: summary, key ideas, quotes, actions.",
         ["personal", "learning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Bibliographic basics.
@@ -1698,7 +1698,7 @@ General wellness only—not medical advice.
         "learning-curriculum",
         "Build a learning curriculum for a skill: modules, resources types, practice projects.",
         ["personal", "learning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Outcome definition.
@@ -1713,7 +1713,7 @@ General wellness only—not medical advice.
         "flashcard-set",
         "Create flashcards (Q/A) from notes for spaced practice.",
         ["personal", "learning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Source material.
@@ -1727,7 +1727,7 @@ General wellness only—not medical advice.
         "research-digest",
         "Digest multiple sources into a brief with citations and confidence levels.",
         ["personal", "research"],
-        ["file_read", "web_search", "file_write"],
+        ["read", "web.search", "write"],
         """
 ## Steps
 1. Question to answer.
@@ -1742,7 +1742,7 @@ General wellness only—not medical advice.
         "job-application-tailor",
         "Tailor a resume bullet set and cover note to a job description without fabricating experience.",
         ["personal", "career"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Extract role requirements.
@@ -1756,7 +1756,7 @@ General wellness only—not medical advice.
         "interview-prep",
         "Prepare for an interview: stories (STAR), questions to ask, research brief.",
         ["personal", "career"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Role and company context from public info.
@@ -1770,7 +1770,7 @@ General wellness only—not medical advice.
         "negotiation-prep",
         "Prepare a negotiation: BATNA, range, script, concessions.",
         ["personal", "career"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Goals and BATNA.
@@ -1784,7 +1784,7 @@ General wellness only—not medical advice.
         "household-chores-plan",
         "Create a household chore plan with cadence and ownership.",
         ["personal", "home"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Spaces and tasks inventory.
@@ -1798,7 +1798,7 @@ General wellness only—not medical advice.
         "home-project-plan",
         "Plan a home project: scope, materials, steps, safety, contingency.",
         ["personal", "home"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Success definition.
@@ -1813,7 +1813,7 @@ General wellness only—not medical advice.
         "event-planning",
         "Plan an event: guest list, venue constraints, timeline, budget, day-of run of show.",
         ["personal", "planning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Purpose, date, guest count.
@@ -1828,7 +1828,7 @@ General wellness only—not medical advice.
         "gift-ideas",
         "Suggest gift ideas from interests, budget, and constraints (no purchase required).",
         ["personal", "social"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Recipient interests and constraints.
@@ -1842,7 +1842,7 @@ General wellness only—not medical advice.
         "message-draft-personal",
         "Draft personal messages (thanks, apology, invite, check-in) with tone options.",
         ["personal", "communication"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Intent and relationship.
@@ -1855,7 +1855,7 @@ General wellness only—not medical advice.
         "boundary-setting",
         "Help articulate personal or work boundaries with scripts and follow-through.",
         ["personal", "communication"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Situation and limit.
@@ -1869,7 +1869,7 @@ General wellness only—not medical advice.
         "focus-block",
         "Design a deep-work focus block: environment, timers, distraction rules, shutdown.",
         ["personal", "productivity"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Single outcome for the block.
@@ -1883,7 +1883,7 @@ General wellness only—not medical advice.
         "digital-declutter",
         "Plan a digital declutter: files, inbox, photos, subscriptions—with batch rules.",
         ["personal", "productivity"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Scope areas.
@@ -1897,7 +1897,7 @@ General wellness only—not medical advice.
         "password-hygiene",
         "Personal password hygiene checklist: unique passwords, manager use, 2FA—without handling secrets.",
         ["personal", "security"],
-        ["file_read"],
+        ["read"],
         """
 ## Steps
 1. Unique passwords per site (manager recommended).
@@ -1911,7 +1911,7 @@ General wellness only—not medical advice.
         "privacy-checkup",
         "Walk through a personal privacy checkup: app permissions, sharing, data downloads.",
         ["personal", "privacy"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. High-risk accounts list.
@@ -1925,7 +1925,7 @@ General wellness only—not medical advice.
         "reminder-system",
         "Design a reminder system: what belongs on calendar vs tasks vs checklists.",
         ["personal", "productivity"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Types of commitments.
@@ -1939,7 +1939,7 @@ General wellness only—not medical advice.
         "second-brain-notes",
         "Organize notes into a simple personal knowledge system: inbox, projects, areas, archives.",
         ["personal", "learning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Capture inbox.
@@ -1953,7 +1953,7 @@ General wellness only—not medical advice.
         "journal-prompts",
         "Provide journal prompts for reflection, goals, or stress processing (not therapy).",
         ["personal", "wellness"],
-        ["file_write"],
+        ["write"],
         """
 ## Disclaimer
 Not therapy or clinical advice.
@@ -1969,7 +1969,7 @@ Not therapy or clinical advice.
         "family-logistics",
         "Coordinate family logistics: shared calendar norms, chores, handoffs, emergency info sheet.",
         ["personal", "home"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Household roles.
@@ -1983,7 +1983,7 @@ Not therapy or clinical advice.
         "caregiver-checklist",
         "Build a caregiver checklist for appointments, meds schedules placeholders, and notes (non-clinical).",
         ["personal", "home"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Disclaimer
 Not medical advice; follow clinician instructions.
@@ -2000,7 +2000,7 @@ Not medical advice; follow clinician instructions.
         "pet-care-routine",
         "Create a pet care routine: feeding, walks, meds placeholders, emergency contacts.",
         ["personal", "home"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Disclaimer
 Not veterinary advice.
@@ -2016,7 +2016,7 @@ Not veterinary advice.
         "move-house-plan",
         "Plan a household move: timeline, inventory, vendors, change-of-address checklist.",
         ["personal", "planning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Move date and constraints.
@@ -2031,7 +2031,7 @@ Not veterinary advice.
         "subscription-audit",
         "Audit subscriptions from a user-provided list: keep, cancel, downgrade recommendations.",
         ["personal", "finance"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. User-provided list only.
@@ -2045,7 +2045,7 @@ Not veterinary advice.
         "personal-crm",
         "Lightweight personal CRM: people notes, last contact, follow-ups (privacy first).",
         ["personal", "social"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Fields: name, context, last contact, next follow-up.
@@ -2059,7 +2059,7 @@ Not veterinary advice.
         "gratitude-practice",
         "Set up a short gratitude practice with prompts and streak-free consistency tips.",
         ["personal", "wellness"],
-        ["file_write"],
+        ["write"],
         """
 ## Steps
 1. 3-item daily format.
@@ -2073,7 +2073,7 @@ Not veterinary advice.
         "time-audit",
         "Guide a time audit: log categories, find leaks, redesign week.",
         ["personal", "productivity"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Track 2–3 days in categories.
@@ -2087,7 +2087,7 @@ Not veterinary advice.
         "personal-okr",
         "Write personal OKRs: objective, key results, weekly check-ins.",
         ["personal", "planning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Objective qualitative.
@@ -2105,7 +2105,7 @@ EXTRA = [
         "game-cinematic-brief",
         "Brief a game cinematic: emotion, camera beats, length, audio, handoff to animation.",
         ["gaming", "cinematic"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Story purpose and emotional arc.
@@ -2120,7 +2120,7 @@ EXTRA = [
         "game-camera-feel",
         "Tune camera feel: follow lag, collision, aim assist notes, comfort options.",
         ["gaming", "feel"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Camera mode inventory.
@@ -2135,7 +2135,7 @@ EXTRA = [
         "game-crafting-system",
         "Design crafting: recipes, stations, discovery, economy impact.",
         ["gaming", "systems"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Player fantasy of crafting.
@@ -2150,7 +2150,7 @@ EXTRA = [
         "game-building-tools",
         "Design player building tools: snap, validation, budgets, sharing limits.",
         ["gaming", "systems"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Placement rules and snap grid.
@@ -2165,7 +2165,7 @@ EXTRA = [
         "game-season-pass-structure",
         "Structure a season pass track: free/premium split ethics, pacing, rewards (no pay-to-win).",
         ["gaming", "liveops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Season narrative theme.
@@ -2180,7 +2180,7 @@ EXTRA = [
         "concept-art-brief",
         "Write a concept art brief: subject, silhouette goals, palette, orthos, deliverables.",
         ["design", "art"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Subject and role in product/game.
@@ -2194,7 +2194,7 @@ EXTRA = [
         "ui-kit-inventory",
         "Inventory UI components and document missing states for a kit.",
         ["design", "ui"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. List components in use.
@@ -2208,7 +2208,7 @@ EXTRA = [
         "poster-layout",
         "Design a poster layout brief: hierarchy, margins, type, print specs.",
         ["design", "print"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Message hierarchy.
@@ -2222,7 +2222,7 @@ EXTRA = [
         "portfolio-case-layout",
         "Structure a portfolio case study page: problem, process, outcome, images.",
         ["design", "career"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Role and contribution honesty.
@@ -2236,7 +2236,7 @@ EXTRA = [
         "content-hooks",
         "Generate non-clickbait content hooks for an article or video topic.",
         ["content", "writing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Core promise.
@@ -2249,7 +2249,7 @@ EXTRA = [
         "video platforms-chapter-markers",
         "Create chapter markers and titles from a video outline or transcript.",
         ["content", "video"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Source outline/transcript.
@@ -2263,7 +2263,7 @@ EXTRA = [
         "short-form-script",
         "Write a short-form vertical video script under a target duration with on-screen text.",
         ["content", "video"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Duration target.
@@ -2277,7 +2277,7 @@ EXTRA = [
         "community-ama-prep",
         "Prepare an AMA: themes, banned topics, moderation, answer bank.",
         ["content", "community"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Goals and audience.
@@ -2292,7 +2292,7 @@ EXTRA = [
         "personal-inventory",
         "Run a personal inventory session: commitments, energy, obligations, free capacity.",
         ["personal", "planning"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Brain dump commitments.
@@ -2306,7 +2306,7 @@ EXTRA = [
         "morning-shutdown-rituals",
         "Design morning and end-of-day rituals that fit a real schedule.",
         ["personal", "productivity"],
-        ["file_write"],
+        ["write"],
         """
 ## Steps
 1. Available minutes.
@@ -2320,7 +2320,7 @@ EXTRA = [
         "conflict-deescalation",
         "Prepare de-escalation language for personal or workplace conflict (non-clinical).",
         ["personal", "communication"],
-        ["file_write"],
+        ["write"],
         """
 ## Steps
 1. Safety first—exit if unsafe.
@@ -2334,7 +2334,7 @@ EXTRA = [
         "celebration-plan",
         "Plan a celebration (birthday, launch, milestone): constraints, program, budget.",
         ["personal", "planning"],
-        ["file_write"],
+        ["write"],
         """
 ## Steps
 1. Occasion and guests.
@@ -2349,7 +2349,7 @@ EXTRA = [
         "personal-values-exercise",
         "Facilitate a values clarification exercise and translate into weekly choices.",
         ["personal", "wellness"],
-        ["file_write"],
+        ["write"],
         """
 ## Disclaimer
 Reflective exercise, not therapy.
@@ -2366,7 +2366,7 @@ Reflective exercise, not therapy.
         "accountability-partnership",
         "Set up an accountability partnership: cadence, metrics, check-in template.",
         ["personal", "habits"],
-        ["file_write"],
+        ["write"],
         """
 ## Steps
 1. Shared goals.
@@ -2380,7 +2380,7 @@ Reflective exercise, not therapy.
         "creative-constraint-sprint",
         "Run a creative sprint with constraints: timebox, output, critique, ship.",
         ["design", "content", "creative"],
-        ["file_write"],
+        ["write"],
         """
 ## Steps
 1. Problem and hard constraints.

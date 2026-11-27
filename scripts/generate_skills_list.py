@@ -200,7 +200,7 @@ def update_readme(readme: Path, section: str) -> None:
                 text = text + "\n\n" + block
         else:
             text = block + "\n" + text
-    readme.write_text(text.rstrip() + "\n", encoding="utf-8")
+    readme.write_text(text.rstrip() + "\n", encoding="utf-8", newline="\n")
 
 
 def main() -> None:
@@ -212,7 +212,7 @@ def main() -> None:
     args = p.parse_args()
 
     rows = collect_skills(args.skills_dir)
-    args.skills_md.write_text(render_skills_md(rows), encoding="utf-8")
+    args.skills_md.write_text(render_skills_md(rows), encoding="utf-8", newline="\n")
     print(f"Wrote {args.skills_md} ({len(rows)} skills)")
     if not args.no_readme:
         update_readme(args.readme, render_readme_section(rows))

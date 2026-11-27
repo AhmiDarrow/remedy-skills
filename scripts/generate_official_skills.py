@@ -51,7 +51,7 @@ SKILLS += [
         "pr-description",
         "Draft a precise PR title and body from branch commits and diff. Use before opening or updating a pull request.",
         ["git", "pr", "docs"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## When to use
 User asks to open a PR, write a PR description, or summarize a branch for review.
@@ -76,7 +76,7 @@ User has a PR body they can submit without guessing what changed.
         "changelog-entry",
         "Author a Keep-a-Changelog entry from commits/diff for a version bump or release.",
         ["docs", "release"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## When to use
 Shipping a version and CHANGELOG must be updated.
@@ -96,7 +96,7 @@ Listing pure refactors with no user or ops impact unless config/CLI breaks.
         "release-checklist",
         "Execute a pre-release gate: dirty tree, version alignment, tests, docs, remaining ship steps.",
         ["release", "ci"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## When to use
 User says ship, release, pre-flight, or cut a tag.
@@ -117,7 +117,7 @@ Pass/fail table with commands and blockers. Do **not** tag or publish unless exp
         "semver-bump",
         "Recommend major/minor/patch from the change set and apply a consistent version bump.",
         ["release", "versioning"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## When to use
 Version bump or \"is this major or patch?\".
@@ -136,7 +136,7 @@ Force-push tags or publish without an explicit request.
         "conventional-commits",
         "Propose or write Conventional Commit messages (feat/fix/docs/chore) matching the diff.",
         ["git", "docs"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Format
 `<type>(optional-scope): <description>` — imperative, ≤72 chars, no trailing period.
@@ -157,7 +157,7 @@ Match repo conventions if they already use a close variant.
         "branch-hygiene",
         "Prune merged local branches, fetch --prune, and name a clean branch for the next task.",
         ["git"],
-        ["bash_exec"],
+        ["bash"],
         """
 ## Steps
 1. `git fetch --prune` and `git branch -vv`.
@@ -174,7 +174,7 @@ No force-push to main/master; no hard reset of shared branches.
         "rebase-onto-main",
         "Update the current branch onto latest main/master via rebase or merge with conflict handling.",
         ["git"],
-        ["bash_exec"],
+        ["bash"],
         """
 ## Steps
 1. Detect default branch (`main` or `master`).
@@ -191,7 +191,7 @@ Force-push the default branch.
         "git-bisect-helper",
         "Drive git bisect with a clear good/bad test command to find a regression-introducing commit.",
         ["git", "debug"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Agree a **test command** (exit 0 = good).
@@ -208,7 +208,7 @@ Automated tests beat manual clicking for bisect reliability.
         "cherry-pick-commit",
         "Cherry-pick specific commits onto the current branch with careful conflict resolution.",
         ["git"],
-        ["bash_exec"],
+        ["bash"],
         """
 ## Steps
 1. Identify SHAs with `git log` / `git show`.
@@ -229,7 +229,7 @@ SKILLS += [
         "dependency-audit",
         "Audit project dependencies for known vulnerabilities and outdated high-risk packages.",
         ["security", "deps"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Detect lockfiles (package-lock, pnpm-lock, Cargo.lock, uv.lock, go.mod, poetry.lock).
@@ -246,7 +246,7 @@ Severity table + recommended actions.
         "secret-scan-guidance",
         "Find likely leaked secrets in the tree and guide rotation without printing secret values.",
         ["security", "secrets"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Prefer `secret scanners`, `secret scanners`, or `secret scanners` if installed.
@@ -263,10 +263,10 @@ Echo full live credentials into chat or commits.
         "owasp-web-checklist",
         "Security-review a web change against practical OWASP-style controls (injection, XSS, authz, CSRF, SSRF).",
         ["security", "web"],
-        ["file_read"],
+        ["read"],
         """
 ## Checklist
-1. Parameterized queries / no shell=True with user input.
+1. Parameterized queries / no shell-enabled subprocess calls with user input.
 2. XSS: encode output; audit HTML sinks.
 3. Cookie flags for sessions (HttpOnly, Secure, SameSite).
 4. Server-side authz on every sensitive action.
@@ -283,7 +283,7 @@ Findings with severity and file references.
         "auth-session-review",
         "Review login, session, JWT, or OAuth handling for common authentication flaws.",
         ["security", "auth"],
-        ["file_read"],
+        ["read"],
         """
 ## Checklist
 1. Passwords: modern KDF only (bcrypt/argon2/scrypt).
@@ -301,7 +301,7 @@ Issues + fixes; never include secret material.
         "cors-review",
         "Review CORS settings for overly broad origins and credentialed cross-origin risks.",
         ["security", "web"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Locate CORS middleware/config.
@@ -315,7 +315,7 @@ Issues + fixes; never include secret material.
         "webhook-verify",
         "Implement or review webhook receivers: signature verification, raw body, replay protection, idempotency.",
         ["security", "api"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Verify HMAC/signature on **raw body** before JSON parse.
@@ -332,7 +332,7 @@ Parsing JSON before verifying signatures breaks many providers.
         "file-upload-secure",
         "Harden file uploads: authz, size/type checks, safe storage keys, download posture.",
         ["security", "backend"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Checklist
 1. Authz who can upload/download.
@@ -347,7 +347,7 @@ Parsing JSON before verifying signatures breaks many providers.
         "threat-model-lite",
         "Write a one-page threat model for a feature: assets, actors, entry points, mitigations.",
         ["security", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Assets to protect.
@@ -362,7 +362,7 @@ Parsing JSON before verifying signatures breaks many providers.
         "sbom-generate",
         "Generate a Software Bill of Materials (CycloneDX/SPDX) using available tooling.",
         ["security", "supply-chain"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Detect ecosystems in the repo.
@@ -376,7 +376,7 @@ Parsing JSON before verifying signatures breaks many providers.
         "license-compliance",
         "Summarize third-party licenses and flag strong copyleft risk for distribution.",
         ["legal", "deps"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Find manifests and existing NOTICE files.
@@ -394,7 +394,7 @@ SKILLS += [
         "test-selection",
         "Select and run the smallest high-value tests for the current change set.",
         ["testing", "ci"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. `git diff --name-only` (and staged) to list changed files.
@@ -408,7 +408,7 @@ SKILLS += [
         "flaky-test-triage",
         "Reproduce and fix flaky tests: races, time, order dependence, shared state.",
         ["testing", "debug"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## Steps
 1. Capture failure log and any seed/order info.
@@ -422,7 +422,7 @@ SKILLS += [
         "e2e-smoke",
         "Define or run a short end-to-end smoke path for the critical user journey.",
         ["testing", "e2e"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Identify the #1 user journey.
@@ -436,7 +436,7 @@ SKILLS += [
         "coverage-gap",
         "Find coverage gaps on changed critical code and add focused tests.",
         ["testing"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## Steps
 1. Run coverage tooling if available.
@@ -450,7 +450,7 @@ SKILLS += [
         "browser-automation-safe",
         "Automate browser checks with browser-test best practices (stable selectors, no fixed sleeps).",
         ["browser", "e2e", "testing"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## Steps
 1. Prefer the browser test runner if present.
@@ -471,7 +471,7 @@ SKILLS += [
         "frontend-a11y",
         "Audit and fix high-impact accessibility issues in UI code (names, keyboard, semantics).",
         ["frontend", "a11y"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Checklist
 1. Controls have accessible names.
@@ -486,7 +486,7 @@ SKILLS += [
         "responsive-ui-pass",
         "Fix layout breakage across mobile/tablet/desktop widths.",
         ["frontend", "css"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Inspect layout components and breakpoints.
@@ -500,7 +500,7 @@ SKILLS += [
         "design-token-sync",
         "Replace one-off colors/spacing with design tokens / CSS variables already in the project.",
         ["frontend", "design"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Locate token sources (CSS vars, Tailwind theme, theme modules).
@@ -514,7 +514,7 @@ SKILLS += [
         "bundle-size-check",
         "Find JS bundle size regressions and propose splits or dependency cuts.",
         ["frontend", "perf"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Production build; note sizes.
@@ -528,7 +528,7 @@ SKILLS += [
         "react-performance",
         "Fix common React performance issues after identifying hot components.",
         ["frontend", "react", "perf"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Identify hot paths (profiler or obvious parent state churn).
@@ -542,7 +542,7 @@ SKILLS += [
         "form-validation-ux",
         "Improve form validation and error mapping UX (inline errors, double-submit, a11y).",
         ["frontend", "ux"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Validate on appropriate events (blur/submit).
@@ -556,7 +556,7 @@ SKILLS += [
         "empty-state-design",
         "Add clear empty/error/no-results states with next actions.",
         ["frontend", "ux"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Distinguish never-created vs filtered-empty vs failed load.
@@ -569,7 +569,7 @@ SKILLS += [
         "i18n-extract",
         "Extract UI strings into i18n catalogs and find missing locale keys.",
         ["frontend", "i18n"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Detect i18n framework.
@@ -583,7 +583,7 @@ SKILLS += [
         "css-specificity-debug",
         "Debug why a CSS rule loses (specificity, order, layers) and fix cleanly.",
         ["frontend", "css"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Identify computed winning rule (devtools if available).
@@ -597,7 +597,7 @@ SKILLS += [
         "visual-regression-setup",
         "Add a small visual regression set for critical screens with stable snapshots.",
         ["frontend", "testing"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Use existing visual tool if any (browser screenshots, visual review tools, etc.).
@@ -615,7 +615,7 @@ SKILLS += [
         "api-contract-review",
         "Review HTTP APIs for validation, authz, status codes, pagination, and error shape consistency.",
         ["api", "backend"],
-        ["file_read"],
+        ["read"],
         """
 ## Checklist
 1. Boundary validation.
@@ -633,7 +633,7 @@ Severity-ordered findings with paths.
         "openapi-sync",
         "Regenerate or manually sync OpenAPI with implemented routes and flag breaking changes.",
         ["api", "docs"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## Steps
 1. Find OpenAPI source of truth (generated or hand-written).
@@ -647,7 +647,7 @@ Severity-ordered findings with paths.
         "db-migration-safe",
         "Write or review DB migrations using expand/contract safety and rollback notes.",
         ["database", "backend"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Rules
 1. Add nullable → backfill → constrain (expand/contract).
@@ -661,7 +661,7 @@ Severity-ordered findings with paths.
         "sql-query-review",
         "Review SQL/ORM usage for N+1, injection, and missing indexes.",
         ["database", "perf", "security"],
-        ["file_read", "bash_exec"],
+        ["read", "bash"],
         """
 ## Steps
 1. Locate queries on the hot path.
@@ -675,7 +675,7 @@ Severity-ordered findings with paths.
         "pagination-standard",
         "Add stable list pagination (cursor preferred) with enforced max limits.",
         ["api", "backend"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Choose cursor or page; prefer cursor for large data.
@@ -689,7 +689,7 @@ Severity-ordered findings with paths.
         "idempotent-api",
         "Make a mutating endpoint safely retryable with idempotency keys.",
         ["api", "reliability"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Accept Idempotency-Key (or domain natural key).
@@ -703,7 +703,7 @@ Severity-ordered findings with paths.
         "rate-limit-design",
         "Design rate limits for public/auth endpoints with clear 429 behavior.",
         ["backend", "security"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Per-IP and per-user/token limits as appropriate.
@@ -717,7 +717,7 @@ Severity-ordered findings with paths.
         "cache-invalidation",
         "Design cache keys and invalidation to prevent stale reads and stampedes.",
         ["backend", "perf"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Map read/write paths and consistency needs.
@@ -731,7 +731,7 @@ Severity-ordered findings with paths.
         "graceful-shutdown",
         "Implement SIGTERM-aware graceful shutdown and drain for servers/workers.",
         ["backend", "reliability"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Trap SIGTERM/SIGINT.
@@ -745,7 +745,7 @@ Severity-ordered findings with paths.
         "health-endpoints",
         "Add liveness vs readiness endpoints with appropriate dependency checks.",
         ["backend", "ops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Rules
 1. Liveness = process healthy (cheap).
@@ -758,7 +758,7 @@ Severity-ordered findings with paths.
         "queue-consumer-safe",
         "Build safe queue consumers: ack semantics, retries, DLQ, idempotent handlers.",
         ["backend", "ops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Assume at-least-once; make handlers idempotent.
@@ -772,7 +772,7 @@ Severity-ordered findings with paths.
         "cron-job-design",
         "Design scheduled jobs with overlap locks, idempotency, and failure alerts.",
         ["backend", "ops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Checklist
 1. Idempotent runs.
@@ -786,7 +786,7 @@ Severity-ordered findings with paths.
         "multi-tenant-isolation",
         "Audit multi-tenant isolation for cross-tenant data leaks.",
         ["security", "backend"],
-        ["file_read"],
+        ["read"],
         """
 ## Checklist
 1. Tenant key on owned rows.
@@ -807,7 +807,7 @@ SKILLS += [
         "dockerfile-harden",
         "Write or harden container image recipes: multi-stage, non-root, pin bases, no secrets in layers.",
         ["container tooling", "devops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Checklist
 1. Pin base images.
@@ -822,7 +822,7 @@ SKILLS += [
         "compose-dev-env",
         "Provide local multi-service containers for local dependencies with healthchecks and sane ports.",
         ["container tooling", "devops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. List required services (db, redis, etc.).
@@ -836,7 +836,7 @@ SKILLS += [
         "ci-pipeline-review",
         "Review CI pipelines for caching, secret hygiene, required checks, and runtime.",
         ["ci", "devops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Checklist
 1. PR + default branch triggers as needed.
@@ -851,7 +851,7 @@ SKILLS += [
         "k8s-manifest-review",
         "Review container orchestration manifests for probes, resources, securityContext, and rollout safety.",
         ["k8s", "devops"],
-        ["file_read"],
+        ["read"],
         """
 ## Checklist
 1. requests/limits present.
@@ -866,7 +866,7 @@ SKILLS += [
         "terraform-plan-review",
         "Review infrastructure-as-code plans for destroys, public exposure, and IAM blast radius before apply.",
         ["iac", "devops"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Read plan (no apply).
@@ -880,7 +880,7 @@ SKILLS += [
         "log-level-triage",
         "Triage production issues from logs: timeline, correlation IDs, dependency health.",
         ["ops", "debug"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. When did it start? Last deploy/config change?
@@ -894,7 +894,7 @@ SKILLS += [
         "structured-logging",
         "Introduce structured logging with levels, correlation IDs, and secret redaction.",
         ["ops", "quality"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Use existing logging framework.
@@ -908,7 +908,7 @@ SKILLS += [
         "metrics-instrumentation",
         "Add RED/USE-style metrics without high-cardinality label explosions.",
         ["ops", "observability"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Pick metrics library already in repo.
@@ -922,7 +922,7 @@ SKILLS += [
         "tracing-spans",
         "Add distributed tracing spans across request and outbound calls.",
         ["ops", "observability"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Detect distributed tracing/tracing setup.
@@ -936,7 +936,7 @@ SKILLS += [
         "backup-restore-drill",
         "Plan or execute a non-destructive backup restore drill and document RTO/RPO.",
         ["ops", "reliability"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Locate backup mechanism.
@@ -953,7 +953,7 @@ Never overwrite production without explicit confirmation.
         "incident-postmortem",
         "Write a blameless postmortem with timeline, root cause, and owned actions.",
         ["ops", "docs"],
-        ["file_write", "file_read"],
+        ["write", "read"],
         """
 ## Sections
 Summary · Impact · Timeline (UTC) · Root cause · What went well/poorly · Actions (owner, date) · Detection gaps.
@@ -966,7 +966,7 @@ Blameless; systems over individuals.
         "runbook-write",
         "Author an on-call runbook: health checks, common failures, deploy/rollback.",
         ["docs", "ops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Sections
 1. Overview & owners
@@ -988,7 +988,7 @@ SKILLS += [
         "adr-write",
         "Write an Architecture Decision Record for a significant technical choice.",
         ["docs", "architecture"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Template
 Title · Date · Status · Context · Decision · Alternatives · Consequences.
@@ -1001,7 +1001,7 @@ Save under `docs/adr/` or project convention; link from architecture docs.
         "markdown-doc-structure",
         "Restructure Markdown documentation for clear heading hierarchy and working links.",
         ["docs"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Outline H1–H3.
@@ -1015,7 +1015,7 @@ Save under `docs/adr/` or project convention; link from architecture docs.
         "bug-report-template",
         "Turn a vague bug into a reproducible report: environment, steps, expected/actual.",
         ["product", "docs"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Fill
 Summary · Environment · Steps · Expected · Actual · Logs (redacted) · Severity · Workaround.
@@ -1028,7 +1028,7 @@ Hand off to debugging once reproducible.
         "user-story-split",
         "Split an epic into vertical, testable user stories with acceptance criteria.",
         ["product", "planning"],
-        ["file_read"],
+        ["read"],
         """
 ## Steps
 1. Restate user outcome.
@@ -1042,7 +1042,7 @@ Hand off to debugging once reproducible.
         "acceptance-criteria",
         "Write testable acceptance criteria for a feature or bugfix.",
         ["product", "testing"],
-        ["file_read"],
+        ["read"],
         """
 ## Rules
 Observable outcomes · edge cases · auth roles · negatives · limits if relevant.
@@ -1055,7 +1055,7 @@ Numbered list verifiable by QA or an agent.
         "feature-flag-rollout",
         "Add a feature flag with default-off rollout, metrics, and removal plan.",
         ["product", "release"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Use existing flag system if any.
@@ -1069,7 +1069,7 @@ Numbered list verifiable by QA or an agent.
         "permissions-matrix",
         "Build a role×action permission matrix and verify server enforcement.",
         ["security", "product"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. List roles and actions.
@@ -1083,7 +1083,7 @@ Numbered list verifiable by QA or an agent.
         "retro-notes",
         "Run a lightweight blameless retro and produce concrete action items.",
         ["process"],
-        ["file_write"],
+        ["write"],
         """
 ## Steps
 1. Facts timeline.
@@ -1100,7 +1100,7 @@ SKILLS += [
         "python-packaging",
         "Package Python projects with pyproject entry points and a clean build/install check.",
         ["python", "packaging"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Ensure pyproject metadata and src layout when appropriate.
@@ -1114,7 +1114,7 @@ SKILLS += [
         "python-typing-pass",
         "Raise typing quality on selected Python modules until mypy/pyright is clean.",
         ["python", "quality"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Run typechecker on target paths.
@@ -1128,7 +1128,7 @@ SKILLS += [
         "nodejs-upgrade",
         "Plan and execute a Node.js runtime upgrade with CI and dependency checks.",
         ["node", "upgrade"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## Steps
 1. Read engines + CI node version.
@@ -1142,7 +1142,7 @@ SKILLS += [
         "ts-strict-migration",
         "Incrementally enable TypeScript strictness without a big-bang freeze.",
         ["typescript", "quality"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. List disabled strict flags.
@@ -1155,7 +1155,7 @@ SKILLS += [
         "go-module-hygiene",
         "Tidy Go modules and verify reproducible builds/tests.",
         ["go"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. `go mod tidy` and review go.sum.
@@ -1168,7 +1168,7 @@ SKILLS += [
         "rust-clippy-fix",
         "Run Clippy and fix correctness-oriented lints; re-test.",
         ["rust", "quality"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## Steps
 1. `cargo clippy` with project-standard flags.
@@ -1185,7 +1185,7 @@ SKILLS += [
         "prompt-eval-harness",
         "Build a small regression suite for prompts/agent behaviors with deterministic checks.",
         ["llm", "testing"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. 10–30 fixtures with expected properties.
@@ -1199,7 +1199,7 @@ SKILLS += [
         "rag-chunking",
         "Design document chunking and metadata for higher-quality RAG retrieval.",
         ["llm", "rag"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Inventory document shapes.
@@ -1213,7 +1213,7 @@ SKILLS += [
         "tool-use-spec",
         "Specify safe tool/function contracts: schemas, side effects, confirmations, timeouts.",
         ["llm", "tools"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. List tools with JSON schemas and side-effect class.
@@ -1227,7 +1227,7 @@ SKILLS += [
         "llm-cost-guardrails",
         "Add token/cost/latency guardrails and sensible model routing.",
         ["llm", "cost"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Meter tokens per path.
@@ -1245,7 +1245,7 @@ SKILLS += [
         "csv-data-cleanup",
         "Profile and clean CSV/TSV data: encoding, types, nulls, dedupe, report.",
         ["data", "csv"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## Steps
 1. Detect encoding/delimiter.
@@ -1259,7 +1259,7 @@ SKILLS += [
         "json-schema-design",
         "Design tight JSON Schema / Zod / Pydantic models with bounds and examples.",
         ["api", "data"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Collect sample payloads.
@@ -1272,7 +1272,7 @@ SKILLS += [
         "money-calculations",
         "Implement money math with integers/decimals, explicit rounding, and currency codes.",
         ["backend", "finance"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Rules
 1. No binary floats for money.
@@ -1286,7 +1286,7 @@ SKILLS += [
         "datetime-timezone",
         "Fix datetime bugs by storing UTC and converting only at the edge.",
         ["quality", "backend"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. UTC in storage/APIs internal.
@@ -1304,7 +1304,7 @@ SKILLS += [
         "http-debugging",
         "Debug HTTP failures with curl -v, status/headers, and TLS basics (redact auth).",
         ["network", "debug"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Reproduce with verbose curl (redact secrets).
@@ -1318,7 +1318,7 @@ SKILLS += [
         "websocket-debug",
         "Diagnose WebSocket handshake, auth, ping/pong, and reconnect storms.",
         ["network", "debug"],
-        ["file_read", "bash_exec"],
+        ["read", "bash"],
         """
 ## Steps
 1. Confirm ws/wss and proxy idle timeouts.
@@ -1332,7 +1332,7 @@ SKILLS += [
         "cross-platform-paths",
         "Fix Windows/macOS/Linux path bugs using pathlib and safe joins.",
         ["windows", "quality"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Replace string path concat with pathlib/Path APIs.
@@ -1345,7 +1345,7 @@ SKILLS += [
         "encoding-fix",
         "Fix Unicode/encoding issues (UTF-8, BOM, mislabeled files).",
         ["data", "debug"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Detect encoding.
@@ -1363,7 +1363,7 @@ SKILLS += [
         "load-test-plan",
         "Design and run a minimal load test on critical endpoints with clear stop conditions.",
         ["perf", "testing"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Choose 1–3 endpoints + realistic mix.
@@ -1380,7 +1380,7 @@ Don't overload shared prod/staging without permission.
         "memory-leak-hunt",
         "Find memory growth in long-running services via profiles and retained allocations.",
         ["perf", "debug"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Reproduce growth under load.
@@ -1394,7 +1394,7 @@ Don't overload shared prod/staging without permission.
         "deadlock-debug",
         "Debug deadlocks via stack dumps and lock-order fixes.",
         ["debug", "concurrency"],
-        ["file_read", "bash_exec"],
+        ["read", "bash"],
         """
 ## Steps
 1. Capture stacks of stuck processes.
@@ -1407,7 +1407,7 @@ Don't overload shared prod/staging without permission.
         "env-config-12factor",
         "Refactor configuration to env-based 12-factor style with validated startup.",
         ["backend", "config"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Inventory config and secrets.
@@ -1421,7 +1421,7 @@ Don't overload shared prod/staging without permission.
         "cli-ux-polish",
         "Polish CLI help, flags, exit codes, and non-interactive CI mode.",
         ["cli", "ux"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Checklist
 1. Accurate `--help` with examples.
@@ -1435,7 +1435,7 @@ Don't overload shared prod/staging without permission.
         "makefile-tasks",
         "Add Makefile/task targets wrapping real project commands (setup/test/lint/run).",
         ["tooling"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Harvest commands from README/CI.
@@ -1448,7 +1448,7 @@ Don't overload shared prod/staging without permission.
         "pre-commit-hooks",
         "Configure pre-commit/husky hooks for format, lint, and optional secret scan.",
         ["tooling", "quality"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Use existing hook system if any.
@@ -1461,7 +1461,7 @@ Don't overload shared prod/staging without permission.
         "editorconfig-setup",
         "Add .editorconfig aligned with project formatters.",
         ["tooling"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Detect languages.
@@ -1474,7 +1474,7 @@ Don't overload shared prod/staging without permission.
         "codeowners-setup",
         "Create CODEOWNERS for critical paths and align with review rules.",
         ["git", "process"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Identify critical directories.
@@ -1487,7 +1487,7 @@ Don't overload shared prod/staging without permission.
         "dev environment container-setup",
         "Add a dev environment container for reproducible contributor environments.",
         ["tooling", "container tooling"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Base image matching runtime.
@@ -1500,7 +1500,7 @@ Don't overload shared prod/staging without permission.
         "seo-basics",
         "Apply basic technical SEO checks to marketing/docs pages.",
         ["frontend", "marketing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Checklist
 Titles/descriptions · canonicals · robots/noindex intent · heading hierarchy · sitemap · basic LCP sanity.
@@ -1510,7 +1510,7 @@ Titles/descriptions · canonicals · robots/noindex intent · heading hierarchy 
         "email-template-review",
         "Review HTML emails for client safety, plain-text parts, and injection.",
         ["frontend", "email"],
-        ["file_read"],
+        ["read"],
         """
 ## Checklist
 Inline CSS · plain-text alternative · escape user content · no scripts · auth links hygiene · document client test plan.
@@ -1520,7 +1520,7 @@ Inline CSS · plain-text alternative · escape user content · no scripts · aut
         "graphql-schema-review",
         "Review GraphQL schemas/resolvers for authz, N+1, pagination, and deprecations.",
         ["api", "graphql"],
-        ["file_read"],
+        ["read"],
         """
 ## Checklist
 Field authz · DataLoader/batching · list pagination · deprecations before removal · depth limits if public · error shape.
@@ -1530,7 +1530,7 @@ Field authz · DataLoader/batching · list pagination · deprecations before rem
         "oauth-app-setup",
         "Configure OAuth/OIDC clients correctly (PKCE, redirects, scopes, token storage).",
         ["auth", "security"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Strict redirect allowlist.
@@ -1544,7 +1544,7 @@ Field authz · DataLoader/batching · list pagination · deprecations before rem
         "stripe-webhook-flow",
         "Implement payment webhooks with verification and idempotent entitlement updates.",
         ["payments", "backend"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Verify signatures on raw body.
@@ -1558,7 +1558,7 @@ Field authz · DataLoader/batching · list pagination · deprecations before rem
         "background-job-ui",
         "Expose long-running job progress/status to users with authz and safe errors.",
         ["backend", "product"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Persist job state (queued/running/succeeded/failed/progress).
@@ -1572,7 +1572,7 @@ Field authz · DataLoader/batching · list pagination · deprecations before rem
         "data-export-user",
         "Implement authenticated user data export with async processing if large.",
         ["privacy", "backend"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Inventory user-owned data.
@@ -1586,7 +1586,7 @@ Field authz · DataLoader/batching · list pagination · deprecations before rem
         "data-deletion-user",
         "Implement account deletion with re-auth, cascade/anonymize, and session revoke.",
         ["privacy", "backend"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Re-authenticate.
@@ -1600,7 +1600,7 @@ Field authz · DataLoader/batching · list pagination · deprecations before rem
         "audit-log-design",
         "Design audit logs for sensitive admin/user actions.",
         ["security", "ops"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Event list (who/what/when/target/outcome).
@@ -1614,7 +1614,7 @@ Field authz · DataLoader/batching · list pagination · deprecations before rem
         "pii-data-handling",
         "Minimize and protect PII: access, logs redaction, retention, deletion paths.",
         ["security", "privacy"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Data inventory.
@@ -1632,7 +1632,7 @@ Engineering guidance, not legal advice.
         "search-indexing",
         "Design app search indexing and sync (FTS or search engine) with relevance checks.",
         ["backend", "search"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Choose DB FTS vs external search.
@@ -1646,7 +1646,7 @@ Engineering guidance, not legal advice.
         "regex-safety",
         "Review regexes for ReDoS and correctness on untrusted input.",
         ["security", "quality"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Find regex on user input.
@@ -1659,7 +1659,7 @@ Engineering guidance, not legal advice.
         "algorithmic-complexity",
         "Find accidental quadratic patterns and propose better data structures.",
         ["perf"],
-        ["file_read"],
+        ["read"],
         """
 ## Steps
 1. Nested loops over large collections.
@@ -1672,7 +1672,7 @@ Engineering guidance, not legal advice.
         "benchmark-micro",
         "Create a trustworthy microbenchmark for a profiled hot function.",
         ["perf", "testing"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Confirm hotspot via profiling first.
@@ -1685,7 +1685,7 @@ Engineering guidance, not legal advice.
         "monorepo-task-runner",
         "Fix monorepo task graphs (turbo/nx/pnpm) for filtered build/test.",
         ["monorepo", "tooling"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Detect workspace tool.
@@ -1699,7 +1699,7 @@ Engineering guidance, not legal advice.
         "backward-compat-api",
         "Plan backward-compatible API evolution and deprecation windows.",
         ["api", "release"],
-        ["file_read"],
+        ["read"],
         """
 ## Rules
 Additive preferred · deprecate before remove · version when breaking · contract tests · CHANGELOG communication.
@@ -1709,7 +1709,7 @@ Additive preferred · deprecate before remove · version when breaking · contra
         "api-client-sdk",
         "Generate or refresh a typed client from OpenAPI for consumers.",
         ["api", "docs"],
-        ["bash_exec", "file_read", "file_write"],
+        ["bash", "read", "write"],
         """
 ## Steps
 1. Ensure OpenAPI accuracy.
@@ -1723,7 +1723,7 @@ Additive preferred · deprecate before remove · version when breaking · contra
         "onboarding-checklist",
         "Design a dismissible first-run checklist that drives activation.",
         ["product", "ux"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. 3–5 activation steps tied to value.
@@ -1737,7 +1737,7 @@ Additive preferred · deprecate before remove · version when breaking · contra
         "pagination-ui",
         "Implement accessible list pagination or load-more with URL state.",
         ["frontend", "ux"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Sync page/cursor to URL.
@@ -1751,7 +1751,7 @@ Additive preferred · deprecate before remove · version when breaking · contra
         "sla-error-budget",
         "Define practical SLIs/SLOs and an error-budget policy for a service.",
         ["ops", "sre"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. User-centric SLIs.
@@ -1765,7 +1765,7 @@ Additive preferred · deprecate before remove · version when breaking · contra
         "grpc-api-design",
         "Design/review gRPC protos with versioning, deadlines, and idempotency.",
         ["api", "grpc"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Proto3; reserve deleted numbers.
@@ -1779,7 +1779,7 @@ Additive preferred · deprecate before remove · version when breaking · contra
         "saml-sso-notes",
         "Enterprise SAML SSO integration checklist (metadata, assertions, JIT).",
         ["auth", "enterprise"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Checklist
 Metadata exchange · signature validation · attribute mapping · JIT vs invite · staging IdP · session behavior.
@@ -1791,7 +1791,7 @@ Use mature libraries; misconfiguration is common.
         "perf-profile-cpu",
         "Capture and interpret a CPU profile to find hot functions before optimizing.",
         ["perf", "debug"],
-        ["bash_exec", "file_read"],
+        ["bash", "read"],
         """
 ## Steps
 1. Reproduce load.
@@ -1805,7 +1805,7 @@ Use mature libraries; misconfiguration is common.
         "contract-test-api",
         "Add consumer/provider contract tests so API changes don't silently break clients.",
         ["testing", "api"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Detect contract-test tools/OpenAPI test usage or introduce lightweight schema tests.
@@ -1818,7 +1818,7 @@ Use mature libraries; misconfiguration is common.
         "fixture-factory",
         "Create maintainable test factories/fixtures instead of brittle object literals everywhere.",
         ["testing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Find repeated test setup.
@@ -1831,7 +1831,7 @@ Use mature libraries; misconfiguration is common.
         "snapshot-test-discipline",
         "Tame snapshot tests: reduce scope, review diffs, avoid golden files that hide bugs.",
         ["testing"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Find large/opaque snapshots.
@@ -1844,7 +1844,7 @@ Use mature libraries; misconfiguration is common.
         "docs-api-examples",
         "Add runnable request/response examples to API docs for the hardest endpoints.",
         ["docs", "api"],
-        ["file_read", "file_write"],
+        ["read", "write"],
         """
 ## Steps
 1. Pick public or partner-facing endpoints.
@@ -1857,7 +1857,7 @@ Use mature libraries; misconfiguration is common.
         "migration-data-backfill",
         "Plan batched data backfills that won't lock production tables.",
         ["database", "ops"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Estimate row counts.
@@ -1871,7 +1871,7 @@ Use mature libraries; misconfiguration is common.
         "feature-toggle-cleanup",
         "Find stale feature flags and remove dead code paths safely.",
         ["product", "quality"],
-        ["file_read", "file_write", "bash_exec"],
+        ["read", "write", "bash"],
         """
 ## Steps
 1. Inventory flags and default states.
@@ -1894,7 +1894,7 @@ def write_skill(name: str, desc: str, tags: list[str], tools: list[str], body: s
     title = name.replace("-", " ").title()
     content = f"""---
 name: {name}
-version: 1.0.0
+version: 1.0.1
 description: >
   {desc}
 author: Remedy Official
