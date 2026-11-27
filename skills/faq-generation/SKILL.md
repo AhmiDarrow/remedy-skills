@@ -2,7 +2,7 @@
 name: faq-generation
 version: 1.0.1
 description: >
-  Generate FAQs from product behavior, support tickets, and objections.
+  Build an FAQ from real user questions with direct, verified answers and a plan to keep them current. Use when support gets the same questions repeatedly or a launch needs an FAQ.
 author: Remedy Official
 license: Apache-2.0
 tags:
@@ -13,6 +13,8 @@ status: discovered
 tools:
   - read
   - write
+  - grep
+  - web.fetch
 metadata:
   source: library
   library_id: faq-generation
@@ -23,19 +25,30 @@ metadata:
 
 # Faq Generation
 
+## When to use
+Recurring questions need one reliable place for answers.
+
 ## Steps
-1. Gather real questions (tickets, sales, docs gaps).
-2. Short accurate answers with links.
-3. Order by frequency.
-4. Keep legal/pricing claims approved.
-5. Review cadence.
+1. Gather questions from what exists: support threads, chat logs, site search terms, sales notes and community posts. Remove personal details. For a pre-launch product, label anticipated questions as predictions.
+2. Group wordings of the same intent, count frequency, and keep the phrasing users use.
+3. Select by frequency and cost of confusion, including blocking and money or data questions even if less common.
+4. Where a question exists because the product or interface is unclear, report that fix; an FAQ entry is a stopgap.
+5. Verify each answer against current behaviour or approved policy. Record its source and owner. Send unknown pricing, legal, security and roadmap answers to the owner instead of guessing.
+6. Answer in the first sentence, with yes or no where honest, then conditions and exceptions, then steps or a link to the full procedure.
+7. Write each answer to stand alone, since readers arrive from search.
+8. Group by user task, not internal team, with short descriptive headings. If collapsible sections are used, keep them keyboard accessible with linkable entries.
+9. Say how to get human help, and set review triggers: releases, policy or price changes and new support patterns.
+
+## Watch out for
+- Marketing questions nobody asked ("Why is the product so good?").
+- Long procedures duplicated from documentation that will drift apart.
+- Promising timelines or refunds the policy does not contain.
 
 ## Operating rules
-- Prefer read-only exploration before changing files.
-- Report commands and outcomes; do not invent results.
-- Ask before destructive, paid, or irreversible actions.
-- Never print or commit secrets, tokens, or private personal data.
-- Use Remedy's tool names (`read`, `write`, `bash`); do not assume a tool that is not in your tool list.
+- Look before you change anything: read the real files, data or page first.
+- Report what you actually ran and saw; never invent results, sources or numbers.
+- Ask before destructive, paid, public or irreversible actions.
+- Never print, store or commit secrets or private personal data.
 
 ## Done when
-The user goal is met, or you list concrete blockers and the next safe step.
+Every entry traces to a real or labelled predicted question and a verified source, has an owner, and unanswered items are listed.
