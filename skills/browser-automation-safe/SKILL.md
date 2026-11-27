@@ -2,7 +2,7 @@
 name: browser-automation-safe
 version: 1.0.1
 description: >
-  Automate browser checks with browser-test best practices (stable selectors, no fixed sleeps).
+  Write or repair automated browser tests with user-facing selectors, condition-based waits, isolated data and failure traces. Use when scripting a UI flow or when browser tests are brittle.
 author: Remedy Official
 license: Apache-2.0
 tags:
@@ -15,6 +15,8 @@ tools:
   - bash
   - read
   - write
+  - edit
+  - grep
 metadata:
   source: library
   library_id: browser-automation-safe
@@ -24,22 +26,31 @@ metadata:
 
 # Browser Automation Safe
 
-## Steps
-1. Prefer the browser test runner if present.
-2. Role/text selectors over brittle CSS when possible.
-3. Wait for conditions, not `sleep`.
-4. Isolate test data; production clicks only with explicit approval.
-5. Save trace/screenshot on failure.
+## When to use
+You are writing browser test code. Run it against local or test environments; any action on production needs explicit approval.
 
-## Safety
-No purchases or destructive admin automation without confirmation.
+## Steps
+1. Use the project's existing runner, config and helpers. Confirm the target address and account are test ones before running.
+2. Select as a user would: role with accessible name, label or visible text. Add a dedicated test ID where text is unstable. Avoid generated class names and positional chains.
+3. Wait for the outcome, not for time. Use the runner's retrying assertions on visible state, URL or a specific response, and start listening for a response before the click that triggers it.
+4. Make each test independent: create its own uniquely named data through an API or seed, and clean up. It must pass alone, repeated and in parallel.
+5. Log in once through supported setup and reuse saved session state where the runner allows. That file contains live cookies, so ignore it in Git. Credentials come from the environment.
+6. Stub third parties such as payment or email at the network edge, and say which flows that leaves unverified.
+7. Assert the user-visible result and, for important writes, the stored result.
+8. Keep trace, screenshot and console logs on failure. Run the new test repeatedly (for example Playwright's `--repeat-each`) before trusting it.
+
+## Watch out for
+- Forced clicks hide overlays or disabled controls a real user would hit.
+- Waiting for network idle is unreliable on pages that poll.
+- Blanket retries turn a real race into an occasional pass.
+- Traces and videos can contain tokens and data; restrict artifact access.
+- Never automate around CAPTCHAs or bot checks; use a test-environment setting the owner provides.
 
 ## Operating rules
-- Prefer **read-only** exploration before edits.
-- Show commands run and their outcomes.
-- Ask before destructive git, production changes, or secret access.
-- Never commit or print live secrets.
-- Stop with a clear blocker list if environment tools are missing.
+- Look before you change anything: read the real files, data or page first.
+- Report what you actually ran and saw; never invent results, sources or numbers.
+- Ask before destructive, paid, public or irreversible actions.
+- Never print, store or commit secrets or private personal data.
 
 ## Done when
-The user's goal is met **or** you report exactly what remains blocked and why.
+The flow passes repeatedly with no fixed sleeps, fails when the behaviour is deliberately broken, and leaves a usable artifact on failure.
