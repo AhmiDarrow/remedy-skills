@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Digest multiple sources into a brief with citations and confidence levels.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - research

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design a habit loop: cue, routine, reward, tracking, restart plan.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - habits

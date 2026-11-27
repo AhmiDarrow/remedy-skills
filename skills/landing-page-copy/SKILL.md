@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write landing page copy: hero, proof, benefits, objections, CTA.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - marketing

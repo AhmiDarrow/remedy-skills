@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Build a caregiver checklist for appointments, meds schedules placeholders, and notes (non-clinical).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - home

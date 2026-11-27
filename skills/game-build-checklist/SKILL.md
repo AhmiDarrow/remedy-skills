@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Pre-ship game build checklist: content locks, known issues, platform cert hygiene (generic).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - release

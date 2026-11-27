@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Create a simple budget snapshot: income, fixed costs, variable, goals (no bank logins).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - finance

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design audit logs for sensitive admin/user actions.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - ops

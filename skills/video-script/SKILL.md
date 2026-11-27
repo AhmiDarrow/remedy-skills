@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write a video script with visual column, VO/dialogue, timing, and B-roll notes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - video

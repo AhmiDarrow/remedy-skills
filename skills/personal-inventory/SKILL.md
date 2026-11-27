@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Run a personal inventory session: commitments, energy, obligations, free capacity.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - planning

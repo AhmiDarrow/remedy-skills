@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write testable acceptance criteria for a feature or bugfix.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - product
   - testing

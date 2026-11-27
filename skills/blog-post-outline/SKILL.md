@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Outline a blog post: angle, outline, sources, CTA, SEO basics without keyword stuffing.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - writing

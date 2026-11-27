@@ -12,4 +12,4 @@ In `tools:` and in the playbook, name only tools the Remedy 2.0 runtime has (`re
 
 ## License
 
-Contributions are accepted under the same **[RemedyAI Source-Available License](./LICENSE)** as this repository and the main [RemedyAI](https://github.com/AhmiDarrow/RemedyAI) product (unless you and maintainers agree otherwise in writing). Prefer `license: LicenseRef-Proprietary` in skill frontmatter to match that license.
+Contributions are accepted under the same **[Apache License 2.0](./LICENSE)** as this repository and the main [RemedyAI](https://github.com/AhmiDarrow/RemedyAI) product (unless you and maintainers agree otherwise in writing). Prefer `license: Apache-2.0` in skill frontmatter to match that license.

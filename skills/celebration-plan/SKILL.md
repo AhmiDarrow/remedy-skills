@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan a celebration (birthday, launch, milestone): constraints, program, budget.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - planning

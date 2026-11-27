@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan an event: guest list, venue constraints, timeline, budget, day-of run of show.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - planning

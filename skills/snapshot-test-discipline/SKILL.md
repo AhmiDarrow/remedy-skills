@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Tame snapshot tests: reduce scope, review diffs, avoid golden files that hide bugs.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - testing
 kind: native

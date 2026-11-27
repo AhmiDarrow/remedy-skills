@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Draft a content strategy: pillars, channels, cadence, voice, measurement.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - marketing

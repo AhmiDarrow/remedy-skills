@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design enemy or NPC AI behaviors: states, perception, difficulty layers.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - ai

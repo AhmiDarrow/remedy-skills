@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add token/cost/latency guardrails and sensible model routing.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - llm
   - cost

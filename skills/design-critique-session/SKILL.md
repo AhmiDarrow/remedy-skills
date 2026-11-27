@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Facilitate a design critique: goals, evidence, actionable feedback, decisions.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - process

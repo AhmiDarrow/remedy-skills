@@ -5,7 +5,7 @@ description: >
   Build and debug games in Godot Engine 4.7.1: project layout, scenes/nodes,
   typed GDScript, signals, resources, input, physics, export, and common pitfalls.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - godot

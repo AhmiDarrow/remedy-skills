@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Drive git bisect with a clear good/bad test command to find a regression-introducing commit.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - git
   - debug

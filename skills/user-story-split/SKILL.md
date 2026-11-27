@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Split an epic into vertical, testable user stories with acceptance criteria.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - product
   - planning

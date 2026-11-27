@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Refactor configuration to env-based 12-factor style with validated startup.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - backend
   - config

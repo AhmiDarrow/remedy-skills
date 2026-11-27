@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Raise typing quality on selected Python modules until mypy/pyright is clean.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - python
   - quality

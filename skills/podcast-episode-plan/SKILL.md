@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan a podcast episode: cold open, segments, guests prep, show notes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - audio

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design a boss encounter with phases, tells, accessibility options, and rewards.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - combat

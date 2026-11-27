@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design a sleep routine: wind-down, environment, schedule consistency (general wellness).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - wellness

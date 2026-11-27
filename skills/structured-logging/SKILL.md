@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Introduce structured logging with levels, correlation IDs, and secret redaction.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - ops
   - quality

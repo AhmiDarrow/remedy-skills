@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Fix Windows/macOS/Linux path bugs using pathlib and safe joins.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - windows
   - quality

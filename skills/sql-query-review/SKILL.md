@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Review SQL/ORM usage for N+1, injection, and missing indexes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - database
   - perf

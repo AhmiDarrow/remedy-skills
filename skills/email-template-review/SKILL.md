@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Review HTML emails for client safety, plain-text parts, and injection.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - email

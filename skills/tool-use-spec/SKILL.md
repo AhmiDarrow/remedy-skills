@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Specify safe tool/function contracts: schemas, side effects, confirmations, timeouts.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - llm
   - tools

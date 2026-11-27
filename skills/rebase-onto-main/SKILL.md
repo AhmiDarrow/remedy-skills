@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Update the current branch onto latest main/master via rebase or merge with conflict handling.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - git
 kind: native

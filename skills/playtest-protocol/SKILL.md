@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Run a structured playtest: goals, tasks, observation notes, and debrief actions.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - research

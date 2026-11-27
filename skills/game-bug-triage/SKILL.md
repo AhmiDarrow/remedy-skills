@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Triage gameplay bugs by repro, severity, blocker status, and regression risk.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - qa

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Find coverage gaps on changed critical code and add focused tests.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - testing
 kind: native

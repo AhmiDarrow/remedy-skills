@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Harden file uploads: authz, size/type checks, safe storage keys, download posture.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - backend

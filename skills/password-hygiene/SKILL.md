@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Personal password hygiene checklist: unique passwords, manager use, 2FA—without handling secrets.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - security

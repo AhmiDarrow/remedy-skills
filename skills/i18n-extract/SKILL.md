@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Extract UI strings into i18n catalogs and find missing locale keys.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - i18n

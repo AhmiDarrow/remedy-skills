@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Propose or write Conventional Commit messages (feat/fix/docs/chore) matching the diff.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - git
   - docs

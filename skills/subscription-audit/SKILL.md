@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Audit subscriptions from a user-provided list: keep, cancel, downgrade recommendations.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - finance

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add liveness vs readiness endpoints with appropriate dependency checks.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - backend
   - ops

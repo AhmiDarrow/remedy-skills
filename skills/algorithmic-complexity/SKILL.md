@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Find accidental quadratic patterns and propose better data structures.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - perf
 kind: native

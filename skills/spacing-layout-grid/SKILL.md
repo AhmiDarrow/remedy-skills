@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Define spacing scale and layout grid for consistent composition.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ui

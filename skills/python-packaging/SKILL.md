@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Package Python projects with pyproject entry points and a clean build/install check.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - python
   - packaging

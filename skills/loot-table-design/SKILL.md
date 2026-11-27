@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design loot tables with drop rates, pity systems, and economy safety.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - systems

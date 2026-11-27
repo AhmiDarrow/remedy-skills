@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Produce a level design brief: layout goals, encounters, pacing, and greybox checklist.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - level-design

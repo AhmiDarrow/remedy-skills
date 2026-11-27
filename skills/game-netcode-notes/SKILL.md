@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Document netcode approach at a design level: prediction, reconciliation, lag compensation caveats.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - multiplayer

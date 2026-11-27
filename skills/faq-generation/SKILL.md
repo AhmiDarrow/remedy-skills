@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Generate FAQs from product behavior, support tickets, and objections.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - support

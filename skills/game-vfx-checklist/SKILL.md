@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Define VFX readability and performance budgets for abilities and environments.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - art

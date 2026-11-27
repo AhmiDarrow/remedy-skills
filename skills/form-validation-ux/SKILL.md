@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Improve form validation and error mapping UX (inline errors, double-submit, a11y).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - ux

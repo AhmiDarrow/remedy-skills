@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Tune combat feel: input buffer, hitstop, feedback, and readability without engine-specific jargon lock-in.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - combat

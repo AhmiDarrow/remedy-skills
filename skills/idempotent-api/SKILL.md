@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Make a mutating endpoint safely retryable with idempotency keys.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - api
   - reliability

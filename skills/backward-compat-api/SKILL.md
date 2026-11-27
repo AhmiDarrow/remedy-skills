@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan backward-compatible API evolution and deprecation windows.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - api
   - release

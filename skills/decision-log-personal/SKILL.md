@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Log a personal or work decision with options, criteria, choice, review date.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - decisions

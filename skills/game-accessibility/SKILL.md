@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Apply game accessibility: colorblind, subtitle, input remapping, difficulty assists.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - a11y

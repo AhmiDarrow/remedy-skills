@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Prepare game strings for localization: keys, variables, length expansion, voice notes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - i18n

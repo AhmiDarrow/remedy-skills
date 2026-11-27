@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Balance a game economy: sinks/faucets, inflation risks, and progression pacing.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - design

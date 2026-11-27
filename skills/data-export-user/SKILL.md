@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Implement authenticated user data export with async processing if large.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - privacy
   - backend

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Break a large goal into milestones, weekly outcomes, and first concrete actions.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - planning

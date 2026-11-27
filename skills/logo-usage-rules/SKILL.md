@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Document logo usage: clear space, min size, on dark/light, misuse examples.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - brand

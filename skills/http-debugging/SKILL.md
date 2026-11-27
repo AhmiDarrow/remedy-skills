@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Debug HTTP failures with curl -v, status/headers, and TLS basics (redact auth).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - network
   - debug

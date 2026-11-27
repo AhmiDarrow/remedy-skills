@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Audit existing content: freshness, accuracy, duplicates, SEO cannibalization, prune plan.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - quality

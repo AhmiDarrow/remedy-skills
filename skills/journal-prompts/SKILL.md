@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Provide journal prompts for reflection, goals, or stress processing (not therapy).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - wellness

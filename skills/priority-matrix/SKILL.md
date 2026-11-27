@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Sort tasks with urgency/importance and recommend what to defer or drop.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - productivity

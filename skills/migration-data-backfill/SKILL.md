@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan batched data backfills that won't lock production tables.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - database
   - ops

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Concept thumbnails: focal subject, text overlay limits, contrast, A/B ideas.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - design

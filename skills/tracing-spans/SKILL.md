@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add distributed tracing spans across request and outbound calls.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - ops
   - observability

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Assemble a written moodboard direction: themes, keywords, references categories (no brand copying).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - creative

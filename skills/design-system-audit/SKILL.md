@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Audit UI against an existing design system: drift, one-offs, missing components.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ui

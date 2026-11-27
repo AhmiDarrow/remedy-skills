@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design cache keys and invalidation to prevent stale reads and stampedes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - backend
   - perf

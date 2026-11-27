@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design a reminder system: what belongs on calendar vs tasks vs checklists.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - productivity

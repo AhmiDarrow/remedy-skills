@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Checklist for editing a video cut: pacing, audio, captions, exports.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - video

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design HUD/information architecture: diegetic vs non-diegetic, clutter budget, combat readability.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - ui

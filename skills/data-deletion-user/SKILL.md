@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Implement account deletion with re-auth, cascade/anonymize, and session revoke.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - privacy
   - backend

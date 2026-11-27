@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Implement or review webhook receivers: signature verification, raw body, replay protection, idempotency.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - api

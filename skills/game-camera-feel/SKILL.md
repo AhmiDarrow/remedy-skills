@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Tune camera feel: follow lag, collision, aim assist notes, comfort options.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - feel

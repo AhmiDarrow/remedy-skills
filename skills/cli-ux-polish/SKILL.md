@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Polish CLI help, flags, exit codes, and non-interactive CI mode.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - cli
   - ux

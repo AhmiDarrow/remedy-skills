@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Create maintainable test factories/fixtures instead of brittle object literals everywhere.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - testing
 kind: native

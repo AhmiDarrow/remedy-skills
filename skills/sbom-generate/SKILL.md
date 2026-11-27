@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Generate a Software Bill of Materials (CycloneDX/SPDX) using available tooling.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - supply-chain

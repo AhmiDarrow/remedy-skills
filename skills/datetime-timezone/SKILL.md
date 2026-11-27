@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Fix datetime bugs by storing UTC and converting only at the edge.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - quality
   - backend

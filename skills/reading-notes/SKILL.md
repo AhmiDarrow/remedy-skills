@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Produce structured reading notes: summary, key ideas, quotes, actions.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - learning

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design app search indexing and sync (FTS or search engine) with relevance checks.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - backend
   - search

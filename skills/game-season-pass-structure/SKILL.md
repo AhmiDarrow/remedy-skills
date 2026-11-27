@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Structure a season pass track: free/premium split ethics, pacing, rewards (no pay-to-win).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - liveops

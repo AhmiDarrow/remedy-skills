@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design rate limits for public/auth endpoints with clear 429 behavior.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - backend
   - security

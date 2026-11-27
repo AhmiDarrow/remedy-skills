@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write or edit game dialogue for voice, subtext, length budgets, and VO notes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - narrative

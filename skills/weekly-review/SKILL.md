@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Run a weekly review: wins, open loops, priorities, calendar look-ahead.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - productivity

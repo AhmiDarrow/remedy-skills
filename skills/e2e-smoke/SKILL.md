@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Define or run a short end-to-end smoke path for the critical user journey.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - testing
   - e2e

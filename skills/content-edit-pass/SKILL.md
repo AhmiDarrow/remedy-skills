@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Edit for clarity, structure, and brevity while preserving author voice.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - writing

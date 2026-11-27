@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Organize notes into a simple personal knowledge system: inbox, projects, areas, archives.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - learning

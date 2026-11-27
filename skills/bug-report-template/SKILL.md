@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Turn a vague bug into a reproducible report: environment, steps, expected/actual.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - product
   - docs

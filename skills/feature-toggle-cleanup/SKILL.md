@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Find stale feature flags and remove dead code paths safely.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - product
   - quality

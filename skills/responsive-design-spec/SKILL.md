@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Specify responsive behavior across breakpoints: reflow, collapse, priority content.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ui

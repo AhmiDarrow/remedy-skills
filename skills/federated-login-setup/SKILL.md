@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Configure OAuth/OIDC clients correctly (PKCE, redirects, scopes, token storage).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - auth
   - security

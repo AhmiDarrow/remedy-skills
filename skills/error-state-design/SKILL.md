@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design error and recovery UI that is calm, specific, and actionable.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ux

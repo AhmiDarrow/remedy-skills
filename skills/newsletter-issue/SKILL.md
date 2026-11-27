@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan and draft a newsletter issue: sections, links, subject lines, preview text.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - email

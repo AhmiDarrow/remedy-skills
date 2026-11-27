@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Build research-backed personas (or proto-personas) with goals, frustrations, contexts.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - research

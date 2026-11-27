@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design and run a minimal load test on critical endpoints with clear stop conditions.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - perf
   - testing

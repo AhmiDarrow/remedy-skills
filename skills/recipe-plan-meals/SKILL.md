@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan meals for N days given constraints (time, diet, servings) with shopping list.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - food

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design scheduled jobs with overlap locks, idempotency, and failure alerts.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - backend
   - ops

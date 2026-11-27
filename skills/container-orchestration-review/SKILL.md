@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Review container orchestration manifests for probes, resources, securityContext, and rollout safety.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - k8s
   - devops

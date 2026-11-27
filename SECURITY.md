@@ -6,4 +6,4 @@
 - **Zip:** Zip-slip protected extraction.
 - **Runtime:** Skills land quarantined; scripts blocked until the user Trusts in Remedy.
 
-Report vulnerabilities to ahmitdarrow@gmail.com (subject: `Remedy Skill Security`).
+Report vulnerabilities to 6326713+AhmiDarrow@users.noreply.github.com (subject: `Remedy Skill Security`).

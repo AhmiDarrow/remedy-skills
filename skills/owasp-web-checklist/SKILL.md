@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Security-review a web change against practical OWASP-style controls (injection, XSS, authz, CSRF, SSRF).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - web

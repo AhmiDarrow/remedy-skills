@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Structure a presentation deck: story arc, slide budget, speaker notes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - content

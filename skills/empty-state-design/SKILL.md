@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add clear empty/error/no-results states with next actions.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - ux

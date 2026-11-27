@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write audio direction: music intensity layers, SFX categories, mix priorities, implementation checklist.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - audio

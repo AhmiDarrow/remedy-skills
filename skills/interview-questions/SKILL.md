@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Prepare interview questions for customers, candidates, or experts with follow-ups.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - research

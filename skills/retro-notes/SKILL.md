@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Run a lightweight blameless retro and produce concrete action items.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - process
 kind: native

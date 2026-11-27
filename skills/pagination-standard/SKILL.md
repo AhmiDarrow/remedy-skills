@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add stable list pagination (cursor preferred) with enforced max limits.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - api
   - backend

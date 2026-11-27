@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design or tighten a core gameplay loop with hooks, rewards, and failure states.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - design

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Improve visual hierarchy on a screen: type scale, weight, spacing, focal point.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ui

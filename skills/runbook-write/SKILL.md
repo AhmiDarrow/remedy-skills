@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Author an on-call runbook: health checks, common failures, deploy/rollback.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - docs
   - ops

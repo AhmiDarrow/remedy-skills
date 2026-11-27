@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add .editorconfig aligned with project formatters.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - tooling
 kind: native

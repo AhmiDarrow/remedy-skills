@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Review CORS settings for overly broad origins and credentialed cross-origin risks.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - web

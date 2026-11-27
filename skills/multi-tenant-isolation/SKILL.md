@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Audit multi-tenant isolation for cross-tenant data leaks.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - backend

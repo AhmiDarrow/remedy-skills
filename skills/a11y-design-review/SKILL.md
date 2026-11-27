@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design-side accessibility review: contrast, focus order, targets, motion, content structure.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - a11y

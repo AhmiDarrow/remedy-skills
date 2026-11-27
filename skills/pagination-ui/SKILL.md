@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Implement accessible list pagination or load-more with URL state.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - ux

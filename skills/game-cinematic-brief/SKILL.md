@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Brief a game cinematic: emotion, camera beats, length, audio, handoff to animation.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - cinematic

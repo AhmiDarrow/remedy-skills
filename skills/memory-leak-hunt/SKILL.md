@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Find memory growth in long-running services via profiles and retained allocations.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - perf
   - debug

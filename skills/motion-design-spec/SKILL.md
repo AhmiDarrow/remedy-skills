@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Specify motion: purpose, duration, easing, reduced-motion fallback.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ui

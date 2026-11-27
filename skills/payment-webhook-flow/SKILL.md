@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Implement payment webhooks with verification and idempotent entitlement updates.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - payments
   - backend

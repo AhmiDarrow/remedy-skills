@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Turn discussion into structured notes: decisions, actions, owners, dates.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - work

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Review GraphQL schemas/resolvers for authz, N+1, pagination, and deprecations.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - api
   - graphql

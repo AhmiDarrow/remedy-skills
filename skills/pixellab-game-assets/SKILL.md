@@ -5,7 +5,7 @@ description: >
   Generate pixel art game assets with PixelLab: MCP server tools and REST API v2 —
   characters, animations, tilesets, map objects, UI, rotate/edit; job workflow and safe auth.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - pixel-art

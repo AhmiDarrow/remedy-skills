@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design difficulty modes and dynamic assists without breaking the fantasy.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - design

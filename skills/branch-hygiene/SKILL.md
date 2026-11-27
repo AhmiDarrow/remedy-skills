@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Prune merged local branches, fetch --prune, and name a clean branch for the next task.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - git
 kind: native

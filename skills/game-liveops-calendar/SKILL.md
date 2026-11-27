@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan live-ops events: cadence, rewards, economy impact, and rollback.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - liveops

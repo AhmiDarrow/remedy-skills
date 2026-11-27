@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Find likely leaked secrets in the tree and guide rotation without printing secret values.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - secrets

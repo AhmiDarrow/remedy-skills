@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Draft a precise PR title and body from branch commits and diff. Use before opening or updating a pull request.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - git
   - pr

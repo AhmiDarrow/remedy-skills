@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design input mapping for keyboard/mouse/gamepad with conflicts and rebinding.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - input

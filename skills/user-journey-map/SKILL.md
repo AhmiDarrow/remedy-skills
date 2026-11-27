@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Map a user journey: stages, emotions, pain points, opportunities.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - research

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Categorize a list of expenses and summarize by category with outliers.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - finance

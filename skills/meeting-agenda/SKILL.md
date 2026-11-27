@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Create a meeting agenda with purpose, topics, times, and decisions needed.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - work

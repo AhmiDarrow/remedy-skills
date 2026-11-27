@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Set up an accountability partnership: cadence, metrics, check-in template.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - habits

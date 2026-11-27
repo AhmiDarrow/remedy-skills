@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Recommend major/minor/patch from the change set and apply a consistent version bump.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - release
   - versioning

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Profile and clean CSV/TSV data: encoding, types, nulls, dedupe, report.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - data
   - csv

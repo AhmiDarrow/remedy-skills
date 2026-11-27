@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Set type scale, line height, and pairing rules for UI or editorial layouts.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ui

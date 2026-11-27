@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Generate non-clickbait content hooks for an article or video topic.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - writing

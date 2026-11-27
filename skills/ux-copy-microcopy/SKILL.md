@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write UI microcopy: buttons, errors, empty states, confirmations—clear and human.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - writing

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Facilitate a values clarification exercise and translate into weekly choices.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - wellness

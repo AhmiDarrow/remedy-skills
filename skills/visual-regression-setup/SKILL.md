@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add a small visual regression set for critical screens with stable snapshots.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - testing

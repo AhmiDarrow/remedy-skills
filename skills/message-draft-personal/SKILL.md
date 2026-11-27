@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Draft personal messages (thanks, apology, invite, check-in) with tone options.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - communication

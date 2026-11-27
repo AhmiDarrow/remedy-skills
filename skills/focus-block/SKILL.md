@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design a deep-work focus block: environment, timers, distraction rules, shutdown.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - productivity

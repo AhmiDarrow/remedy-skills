@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write an illustration brief: story, style constraints, sizes, deliverables.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - art

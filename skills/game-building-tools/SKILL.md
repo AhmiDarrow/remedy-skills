@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design player building tools: snap, validation, budgets, sharing limits.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - systems

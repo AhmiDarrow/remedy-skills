@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Enterprise SAML SSO integration checklist (metadata, assertions, JIT).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - auth
   - enterprise

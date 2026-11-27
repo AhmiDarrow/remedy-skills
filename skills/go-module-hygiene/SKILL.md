@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Tidy Go modules and verify reproducible builds/tests.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - go
 kind: native

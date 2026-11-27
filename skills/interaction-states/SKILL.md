@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Specify full interaction states for components: default, hover, focus, active, disabled, error, loading.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ui

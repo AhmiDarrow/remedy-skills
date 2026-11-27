@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Audit project dependencies for known vulnerabilities and outdated high-risk packages.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - deps

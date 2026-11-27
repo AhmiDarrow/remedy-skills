@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Draft a press release: headline, lede, body, boilerplate, quotes, links.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - comms

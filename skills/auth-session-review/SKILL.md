@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Review login, session, JWT, or OAuth handling for common authentication flaws.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - auth

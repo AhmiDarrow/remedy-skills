@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design a dismissible first-run checklist that drives activation.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - product
   - ux

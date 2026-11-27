@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan and execute a Node.js runtime upgrade with CI and dependency checks.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - node
   - upgrade

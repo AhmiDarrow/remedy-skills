@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Build a role×action permission matrix and verify server enforcement.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - product

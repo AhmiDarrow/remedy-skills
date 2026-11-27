@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add a feature flag with default-off rollout, metrics, and removal plan.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - product
   - release

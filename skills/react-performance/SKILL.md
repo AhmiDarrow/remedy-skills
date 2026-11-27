@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Fix common React performance issues after identifying hot components.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - react

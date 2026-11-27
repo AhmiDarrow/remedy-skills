@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Run a creative sprint with constraints: timebox, output, critique, ship.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - content

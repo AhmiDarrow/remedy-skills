@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write a design brief: problem, audience, constraints, success metrics, deliverables.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - product

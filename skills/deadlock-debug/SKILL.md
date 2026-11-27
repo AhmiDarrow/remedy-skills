@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Debug deadlocks via stack dumps and lock-order fixes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - debug
   - concurrency

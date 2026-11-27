@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Build a realistic daily plan from priorities, calendar constraints, and energy.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - productivity

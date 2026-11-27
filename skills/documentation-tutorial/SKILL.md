@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write a task-oriented tutorial with prerequisites, steps, verification, troubleshooting.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - docs

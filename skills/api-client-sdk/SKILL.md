@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Generate or refresh a typed client from OpenAPI for consumers.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - api
   - docs

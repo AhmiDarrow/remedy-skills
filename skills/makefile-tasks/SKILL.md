@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add Makefile/task targets wrapping real project commands (setup/test/lint/run).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - tooling
 kind: native

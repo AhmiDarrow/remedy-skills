@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Produce low-fidelity wireframe flows for a user task (text or simple structure).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ux

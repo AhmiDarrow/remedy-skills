@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Suggest gift ideas from interests, budget, and constraints (no purchase required).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - social

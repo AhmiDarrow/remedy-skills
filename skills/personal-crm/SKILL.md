@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Lightweight personal CRM: people notes, last contact, follow-ups (privacy first).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - social

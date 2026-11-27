@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add a dev environment container for reproducible contributor environments.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - tooling
   - container tooling

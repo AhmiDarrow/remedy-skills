@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add runnable request/response examples to API docs for the hardest endpoints.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - docs
   - api

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Select and run the smallest high-value tests for the current change set.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - testing
   - ci

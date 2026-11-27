@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Review regexes for ReDoS and correctness on untrusted input.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - security
   - quality

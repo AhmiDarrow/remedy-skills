@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Tailor a resume bullet set and cover note to a job description without fabricating experience.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - career

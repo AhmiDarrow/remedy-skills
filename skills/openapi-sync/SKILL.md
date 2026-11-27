@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Regenerate or manually sync OpenAPI with implemented routes and flag breaking changes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - api
   - docs

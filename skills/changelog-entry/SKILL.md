@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Author a Keep-a-Changelog entry from commits/diff for a version bump or release.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - docs
   - release

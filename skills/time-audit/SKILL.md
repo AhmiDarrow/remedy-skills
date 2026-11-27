@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Guide a time audit: log categories, find leaks, redesign week.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - productivity

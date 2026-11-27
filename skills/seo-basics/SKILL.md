@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Apply basic technical SEO checks to marketing/docs pages.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - marketing

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Define gameplay telemetry events for funnels, balance, and crash context (privacy-aware).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - ops

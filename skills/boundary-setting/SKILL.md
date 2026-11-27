@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Help articulate personal or work boundaries with scripts and follow-through.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - communication

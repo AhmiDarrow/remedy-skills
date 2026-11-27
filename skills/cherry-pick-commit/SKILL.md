@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Cherry-pick specific commits onto the current branch with careful conflict resolution.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - git
 kind: native

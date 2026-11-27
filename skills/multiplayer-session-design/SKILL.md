@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design multiplayer session flow: matchmaking intent, disconnects, host migration, fairness.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - multiplayer

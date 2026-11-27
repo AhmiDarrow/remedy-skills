@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Expose long-running job progress/status to users with authz and safe errors.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - backend
   - product

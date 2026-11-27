@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Set up a short gratitude practice with prompts and streak-free consistency tips.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - wellness

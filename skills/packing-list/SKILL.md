@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Generate a packing list by trip type, climate, and activities.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - travel

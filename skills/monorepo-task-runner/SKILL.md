@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Fix monorepo task graphs (turbo/nx/pnpm) for filtered build/test.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - monorepo
   - tooling

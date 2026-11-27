@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Write or harden container image recipes: multi-stage, non-root, pin bases, no secrets in layers.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - container tooling
   - devops

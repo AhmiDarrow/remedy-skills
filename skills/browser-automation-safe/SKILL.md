@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Automate browser checks with browser-test best practices (stable selectors, no fixed sleeps).
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - browser
   - e2e

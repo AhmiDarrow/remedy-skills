@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Add consumer/provider contract tests so API changes don't silently break clients.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - testing
   - api

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Prepare a difficult conversation: goals, script, boundaries, outcomes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - communication

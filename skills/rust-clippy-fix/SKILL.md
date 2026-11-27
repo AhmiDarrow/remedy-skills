@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Run Clippy and fix correctness-oriented lints; re-test.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - rust
   - quality

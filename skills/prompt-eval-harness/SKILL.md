@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Build a small regression suite for prompts/agent behaviors with deterministic checks.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - llm
   - testing

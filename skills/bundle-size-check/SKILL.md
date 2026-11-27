@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Find JS bundle size regressions and propose splits or dependency cuts.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - perf

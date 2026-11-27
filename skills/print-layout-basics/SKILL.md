@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Lay out print-ready pages: margins, bleed, hierarchy, export checklist.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - print

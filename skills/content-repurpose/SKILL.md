@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Repurpose one long asset into multiple channel formats without sounding duplicate.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - content
   - marketing

@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Inventory UI components and document missing states for a kit.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ui

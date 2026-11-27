@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Define or refine a color system: roles (bg, text, accent, danger), contrast, dark mode.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - ui

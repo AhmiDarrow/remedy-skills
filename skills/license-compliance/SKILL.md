@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Summarize third-party licenses and flag strong copyleft risk for distribution.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - legal
   - deps

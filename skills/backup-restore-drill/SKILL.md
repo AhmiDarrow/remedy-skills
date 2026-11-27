@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Plan or execute a non-destructive backup restore drill and document RTO/RPO.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - ops
   - reliability

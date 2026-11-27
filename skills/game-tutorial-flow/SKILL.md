@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Design an onboarding/tutorial that teaches verbs in context with skip options.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - ux

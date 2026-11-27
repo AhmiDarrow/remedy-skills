@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Define practical SLIs/SLOs and an error-budget policy for a service.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - ops
   - sre

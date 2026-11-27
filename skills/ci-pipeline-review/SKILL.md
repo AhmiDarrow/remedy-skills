@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Review CI pipelines for caching, secret hygiene, required checks, and runtime.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - ci
   - devops

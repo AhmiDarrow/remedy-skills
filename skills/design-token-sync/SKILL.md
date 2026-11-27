@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Replace one-off colors/spacing with design tokens / CSS variables already in the project.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - frontend
   - design

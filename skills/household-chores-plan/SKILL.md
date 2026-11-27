@@ -4,7 +4,7 @@ version: 1.0.1
 description: >
   Create a household chore plan with cadence and ownership.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - home
