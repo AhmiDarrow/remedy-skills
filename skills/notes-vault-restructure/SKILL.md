@@ -2,7 +2,7 @@
 name: notes-vault-restructure
 version: 1.0.0
 description: >
-  Reorganise a folder of plain-text or Markdown notes without breaking links or losing files. Use when a notes collection has grown into overlapping, deeply nested or abandoned folders.
+  Set up a simple note system, or reorganise plain-text or Markdown notes without breaking links or losing files. Use when someone wants to start organising notes or a collection has grown messy.
 author: Remedy Official
 license: Apache-2.0
 tags:
@@ -29,7 +29,7 @@ metadata:
 # Notes Vault Restructure
 
 ## When to use
-The user can no longer find things and wants a new structure applied to existing notes.
+The user can no longer find things and wants a new structure applied to existing notes, or is setting up a note system from nothing. Starting from nothing, skip the numbered steps: set up one capture inbox, a few folders (projects, areas, reference, archive), a naming rule, links or tags for finding things, and a weekly time to empty the inbox.
 
 ## Steps
 1. Back up the whole folder, including attachments and the app's hidden settings directory. If it is under Git, commit first. Ask them to close the app or pause sync during moves.
@@ -55,4 +55,4 @@ The user can no longer find things and wants a new structure applied to existing
 - Never print, store or commit secrets or private personal data.
 
 ## Done when
-File counts match the backup, no new broken links exist, and the user has the move map and an untouched backup.
+File counts match the backup, no new broken links exist, and the user has the move map and an untouched backup. For a new system, the inbox, folders, naming rule and weekly review are in place.

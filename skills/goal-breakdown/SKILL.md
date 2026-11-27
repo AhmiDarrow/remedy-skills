@@ -37,7 +37,7 @@ A goal is too big or vague to act on.
 5. Work backward into milestones that each produce something finished or testable. Put the riskiest assumption in the first one.
 6. Plan only the next two or three weeks in detail; leave later milestones coarse.
 7. Give three next actions that are physical, small enough to start in one sitting, and not blocked. Name the dependency for anything that is.
-8. Set a weekly check: what moved, the number for each result, what is blocked, next action. Add a date to decide whether to continue, change or stop.
+8. Set a weekly check: what moved, the number for each result, what is blocked, next action. Add a date to decide whether to continue, change or stop. At the end of a cycle, score each key result against its baseline and target, then note what to keep, change or drop.
 9. Save goals and updates only after the user agrees.
 
 ## Watch out for

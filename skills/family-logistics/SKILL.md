@@ -33,7 +33,7 @@ Several people's schedules and duties need to be visible and owned.
 2. Agree calendar rules: one shared calendar, what must go on it, title format with the person's name first, who drives or attends, and how conflicts get raised.
 3. Check the next two to four weeks for overlaps, uncovered pickups, travel time and school or care closures.
 4. List recurring work, including the invisible part: noticing, booking, buying supplies, filling forms, remembering birthdays. Give each a single owner for the whole job.
-5. For chores set a frequency, an agreed standard of "done", and an age-appropriate helper where relevant. Compare estimated weekly hours per person against their free time, and let the household decide what is fair.
+5. For chores set a frequency, an agreed standard of "done", and an age-appropriate helper where relevant. Compare estimated weekly hours per person against their free time, and let the household decide what is fair. List the supplies chores use up and who restocks them, and agree short daily and weekly reset routines.
 6. Name a backup for time-critical duties and say how a handover is requested and confirmed. Silence is not acceptance.
 7. For sitters and relatives write a handover sheet: routine, who may collect the child, allergies, contacts and what to do if plans change.
 8. Set a short weekly check-in and a four-week trial, then change what did not work.

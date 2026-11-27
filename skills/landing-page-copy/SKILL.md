@@ -34,7 +34,7 @@ A single page must explain an offer and lead visitors to one action.
 4. Order sections by the visitor's questions: is this for me, how does it work, why believe it, what does it cost, what can go wrong.
 5. Pair each benefit with a mechanism or evidence. Use only real testimonials, logos and numbers with permission; mark missing proof as placeholders.
 6. Answer actual objections such as price, effort, switching, data and cancellation.
-7. Repeat the same primary action where the reader is ready. State near it any charge, renewal or commitment.
+7. Repeat the same primary action where the reader is ready. State near it any charge, renewal or commitment. Match the button to how ready the visitor is (learning, comparing, buying) and to what the click really does, answer the live worry (cost, time, cancellation) truthfully beside it, and offer a variant if there is traffic to test.
 8. Draft a page title, meta description and alt text, keeping headings meaningful on a small screen.
 9. Check every claim against actual behaviour, flag regulated or comparative claims for review, and propose a five-second comprehension check with a few target readers.
 

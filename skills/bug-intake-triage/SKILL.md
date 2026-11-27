@@ -31,8 +31,8 @@ There is a backlog of reports of mixed quality and limited time to fix them.
 ## Steps
 1. Pull the list with age, labels and comment count. Work oldest-unlabelled and most-recent first, so both neglected and breaking items surface.
 2. Scan all new items once for emergencies: data loss, security exposure, crash on start, broken install or update. Raise these immediately, before finishing the pass.
-3. For each report extract version, platform, steps, expected and actual. Note what is missing.
-4. Score severity (harm when it happens) separately from priority (when to fix it, given how many hit it, workaround, and release timing).
+3. For each report extract version, platform, steps, expected and actual. Note what is missing. For games, also record the build number, platform and hardware or settings in a platform matrix, and ask for logs or save files with personal data removed.
+4. Score severity (harm when it happens) separately from priority (when to fix it, given how many hit it, workaround, and release timing). Note the risk that a fix causes regressions and, where the project uses them, assign an owner and milestone.
 5. Check whether it still exists: compare the reported version with the fix history, and reproduce if it takes only minutes.
 6. Assign exactly one next action: fix now, reproduce, ask reporter (with specific questions), duplicate of N, expected behaviour (explain), or decline with a reason.
 7. Group duplicates by fingerprint (exact error string, top in-project frame, first bad version), not by similar wording or a generic message such as "timeout". Merge only if one fix would resolve both, keep the report with the best reproduction, and carry unique platform or log details into it.

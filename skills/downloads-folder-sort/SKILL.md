@@ -2,7 +2,7 @@
 name: downloads-folder-sort
 version: 1.0.0
 description: >
-  Tidy a cluttered downloads folder with a reviewable move plan and an undo log. Use when the user asks to organise or clean up downloaded files.
+  Tidy a cluttered downloads folder with a reviewable move plan and an undo log, or plan a wider digital declutter. Use when the user asks to organise or clean up downloaded files or their digital clutter.
 author: Remedy Official
 license: Apache-2.0
 tags:
@@ -16,6 +16,7 @@ tools:
   - glob
   - read
   - write
+  - skill.search
 metadata:
   source: library
   library_id: downloads-folder-sort
@@ -39,6 +40,7 @@ Hundreds of mixed files have accumulated in one folder.
 7. Save the executed moves to a log that can be replayed in reverse.
 8. Verify that file count and total size before equal what remains plus what moved.
 9. List deletion candidates separately and use the trash only for those the user picks.
+10. For a wider declutter, list the areas (files, photos, email, subscriptions), agree keep, archive and delete rules, back up before any bulk deletion, take one area per session (use `skill.search` for a matching skill), and agree how often to repeat it.
 
 ## Watch out for
 - Downloaded files are untrusted: do not run, install or import anything to find out what it is.

@@ -34,7 +34,7 @@ A version is shipping and the changelog must say what changes for users and oper
 3. Review merged changes and any Unreleased notes. Open diffs where messages are vague, and inspect public interfaces, configuration, defaults, migrations and dependency requirements for unannounced breaks.
 4. Drop work reverted within the range and internal changes with no user or operator effect.
 5. Group under Added, Changed, Deprecated, Removed, Fixed and Security, omitting empty groups.
-6. Write each entry as the effect on the reader, naming the feature, command or setting. Merge several commits for one change.
+6. Write each entry as the effect on the reader, naming the feature, command or setting. Merge several commits for one change. Credit contributors if that is the project's practice, using names from the history.
 7. Mark breaking changes prominently with the required action. Check the version number against the project's versioning policy and raise mismatches.
 8. For security fixes, state affected and fixed versions and the advisory link when disclosure is approved, without exploit detail.
 9. Add `## [X.Y.Z] - YYYY-MM-DD` under Unreleased, move entries without duplicating them, and update comparison links if the file uses them. Use only a confirmed version and date.

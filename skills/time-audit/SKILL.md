@@ -34,7 +34,7 @@ Time feels short or a new commitment is on the table.
 4. Set six to eight categories. Have them log at least three days including one unusual or non-work day, ideally a week, in half-hour blocks soon after they happen, noting interruptions and energy.
 5. Total by category. Fill no gaps by guessing; show them as unlogged.
 6. Compare actual with intended time. Look for fragmented blocks, switching, overruns, and tasks that could stop, shrink, move or be shared.
-7. For a new yes, calculate weekly hours left after sleep, essentials, commitments and slack. If it does not fit, name what would have to go.
+7. For a new yes, calculate weekly hours left after sleep, essentials, commitments and slack. If it does not fit, name what would have to go. If that yes or no is all the user needs, a log is not required: use steps 2, 3 and 7 and label the hours as estimates.
 8. Choose one or two changes for a week, with a measure. Draft any renegotiation or decline message for the user to send.
 9. Compare after the week and keep, adjust or drop.
 
@@ -50,4 +50,4 @@ Time feels short or a new commitment is on the table.
 - Never print, store or commit secrets or private personal data.
 
 ## Done when
-Logged totals and commitments are compared with priorities, available capacity is stated, and a measurable one-week change is chosen.
+Logged totals and commitments are compared with priorities, available capacity is stated, and a measurable one-week change is chosen; a quick capacity check instead states estimated hours, labelled as estimates.

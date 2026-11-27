@@ -6,6 +6,37 @@ from __future__ import annotations
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / "skills"
+# merged or removed from the library; do not bring them back
+REMOVED = {
+    "accountability-partnership",
+    "background-job-ui",
+    "blog-post-outline",
+    "call-to-action-copy",
+    "celebration-plan",
+    "changelog-user-facing",
+    "community-ama-prep",
+    "concept-art-brief",
+    "content-hooks",
+    "creative-constraint-sprint",
+    "digital-declutter",
+    "editorconfig-setup",
+    "focus-block",
+    "game-bug-triage",
+    "gift-ideas",
+    "gratitude-practice",
+    "household-chores-plan",
+    "journal-prompts",
+    "message-draft-personal",
+    "morning-shutdown-rituals",
+    "onboarding-checklist",
+    "personal-inventory",
+    "personal-okr",
+    "personal-values-exercise",
+    "priority-matrix",
+    "reminder-system",
+    "second-brain-notes",
+    "ui-kit-inventory",
+}
 
 BUNDLED = {
     "code-review",
@@ -1888,7 +1919,7 @@ def write_skill(name: str, desc: str, tags: list[str], tools: list[str], body: s
     if name in BUNDLED:
         return
     d = ROOT / name
-    if (d / "SKILL.md").exists():  # skills/ is the source of truth
+    if name in REMOVED or (d / "SKILL.md").exists():  # skills/ is the source of truth
         return
     d.mkdir(parents=True, exist_ok=True)
     tags_y = "\n".join(f"  - {t}" for t in tags)
