@@ -1,6 +1,6 @@
 # Skills list
 
-_Auto-generated from `skills/*/SKILL.md` — **830** skills. Last updated: 2026-11-27 13:30 UTC. Do not edit by hand; run `python scripts/generate_skills_list.py` or `python scripts/build_catalog.py`._
+_Auto-generated from `skills/*/SKILL.md` — **830** skills. Last updated: 2026-11-27 14:26 UTC. Do not edit by hand; run `python scripts/generate_skills_list.py` or `python scripts/build_catalog.py`._
 
 ## Summary by area
 

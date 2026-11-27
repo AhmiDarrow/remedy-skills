@@ -132,7 +132,7 @@ python scripts/generate_skills_list.py   # SKILLS.md + README library section
 python scripts/build_catalog.py          # catalog.json (also refreshes the list)
 
 # Public release catalog (download URLs → this repo’s release assets):
-python scripts/build_catalog.py --github-urls --release-tag v1.0.0
+python scripts/build_catalog.py --github-urls --release-tag v2.0.0
 export REMEDY_SKILLS_SIGNING_KEY="..."   # base64 Ed25519 seed
 python scripts/sign_catalog.py
 ```
