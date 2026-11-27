@@ -1,18 +1,20 @@
 ---
 name: photo-art-direction
-version: 1.0.0
+version: 1.0.1
 description: >
-  Art-direct photoshoots or stock selection: subject, lighting, crop, usage rights checklist.
+  Write an art direction brief and shot list for a photoshoot or stock image search, covering crops, consistency and usage rights. Use when a campaign, site or product needs photos that fit together.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - design
   - content
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
+  - web.search
+  - web.fetch
 metadata:
   source: library
   library_id: photo-art-direction
@@ -23,19 +25,30 @@ metadata:
 
 # Photo Art Direction
 
+## When to use
+Someone must commission, shoot or select images for a defined purpose.
+
 ## Steps
-1. Message and emotion.
-2. Subject/casting/setting notes.
-3. Lighting and color treatment.
-4. Crop for channels (hero, social, thumb).
-5. Rights/model release checklist (generic).
+1. List every placement with aspect ratio, pixel size, text overlay and focal safe area, plus the message each image must carry.
+2. Set the visual rules: subject, setting, light direction and quality, colour, lens distance and angle, depth of field and what to avoid. Describe references in words and use them for mood, not for copying a composition.
+3. Specify people and settings that are credible and varied without tokenism or stereotypes.
+4. For a shoot, make a shot list: priority, placement, framing, orientation, props, people and time. Capture wide versions with space for text and crops. Add schedule, backup light or weather plan and file backup.
+5. For stock, give search terms, selection and rejection criteria, and compare candidates side by side for matching light and colour.
+6. For each image record source, creator, licence text, permitted uses, territory, duration, edits allowed, credit and proof of purchase.
+7. Check model releases for recognisable people, property or artwork permissions and visible trademarks. Editorial-only images do not suit advertising. Minors and sensitive subjects need extra consent and qualified advice.
+8. Test chosen images in real layouts and crops, checking text contrast, and write alt text for each use.
+
+## Watch out for
+- "Royalty-free" does not mean free or unrestricted.
+- Images found by web search carry no permission.
+- A strong landscape frame may fail completely as a vertical crop.
+- Retouching or generated elements that misrepresent a product or real event.
 
 ## Operating rules
-- Prefer read-only exploration before changing files.
-- Report commands and outcomes; do not invent results.
-- Ask before destructive, paid, or irreversible actions.
-- Never print or commit secrets, tokens, or private personal data.
-- Use generic tool names only (shell, file read/write, image tools already in Remedy).
+- Look before you change anything: read the real files, data or page first.
+- Report what you actually ran and saw; never invent results, sources or numbers.
+- Ask before destructive, paid, public or irreversible actions.
+- Never print, store or commit secrets or private personal data.
 
 ## Done when
-The user goal is met, or you list concrete blockers and the next safe step.
+Every placement has an approved shot or candidate that survives its crop, and each image has a rights record with unresolved releases flagged.

@@ -1,18 +1,19 @@
 ---
 name: expense-categorize
-version: 1.0.0
+version: 1.0.1
 description: >
-  Categorize a list of expenses and summarize by category with outliers.
+  Categorise an expense list or bank export, total it by category and flag duplicates, odd amounts and unclear items. Use when someone shares transactions and asks where the money went or needs them sorted for records.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - personal
   - finance
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: expense-categorize
@@ -23,19 +24,30 @@ metadata:
 
 # Expense Categorize
 
+## When to use
+A pasted list, CSV or statement export needs consistent categories and reliable totals.
+
 ## Steps
-1. Accept CSV/list from user.
-2. Categories consistent.
-3. Totals and top merchants.
-4. Outliers.
-5. Questions for ambiguous items.
+1. Work on a copy. Ask the purpose (personal view, reimbursement, accountant), the period and any existing category list.
+2. Inspect the file: delimiter, encoding, header rows, decimal separator, day-month order, currency, and whether spending is negative or in a separate debit column.
+3. Record row count and net sum before changing anything.
+4. Separate transfers between own accounts, card repayments, cash withdrawals and savings moves; counting them double-counts spending. Net refunds against their original category.
+5. Define a short category list with one rule each, then apply merchant rules consistently. Save the merchant-to-category table for next time.
+6. Marketplaces, supermarkets and payment processors can hide mixed purchases. Put unclear rows in "needs review" and ask in one batch; do not guess.
+7. Compute totals with a script in `bash`, never by mental arithmetic. Keep currencies separate unless the user gives rates or the file shows converted amounts.
+8. Flag same-amount repeats close together, changed recurring prices, unfamiliar merchants and unusually large items. For an unrecognised charge, suggest contacting the bank promptly.
+9. Reconcile: category totals plus excluded rows must equal the starting net. Then report totals, largest merchants and open questions.
+
+## Watch out for
+- Two identical rows may be two real purchases; flag, do not delete.
+- Whether something is deductible or reimbursable depends on local rules or policy. Leave that to the policy, tax authority or accountant.
+- Echoing full account or card numbers in output.
 
 ## Operating rules
-- Prefer read-only exploration before changing files.
-- Report commands and outcomes; do not invent results.
-- Ask before destructive, paid, or irreversible actions.
-- Never print or commit secrets, tokens, or private personal data.
-- Use generic tool names only (shell, file read/write, image tools already in Remedy).
+- Look before you change anything: read the real files, data or page first.
+- Report what you actually ran and saw; never invent results, sources or numbers.
+- Ask before destructive, paid, public or irreversible actions.
+- Never print, store or commit secrets or private personal data.
 
 ## Done when
-The user goal is met, or you list concrete blockers and the next safe step.
+Every row is categorised, excluded or marked for review, and the totals reconcile to the original sum.

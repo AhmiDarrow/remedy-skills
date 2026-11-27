@@ -42,7 +42,7 @@ def build_catalog(
     *,
     repo: str = "AhmiDarrow/remedy-skills",
     use_local: bool = True,
-    release_tag: str = "v1.0.0",
+    release_tag: str = "v2.0.0",
     write_dist: bool = True,
 ) -> dict:
     skills_dir = skills_dir.resolve()
@@ -72,7 +72,7 @@ def build_catalog(
         if use_local:
             download_url = f"local:{name}"
         else:
-            # Release tag is library release (v1.0.0), not each skill version.
+            # Release tag is library release (v2.0.0), not each skill version.
             download_url = (
                 f"https://github.com/{repo}/releases/download/"
                 f"{release_tag}/{zip_name}"
@@ -96,7 +96,7 @@ def build_catalog(
                 "reviews_count": 0,
                 "updated_at": now,
                 "published_at": now,
-                "compatible_remedy": [">=0.15.0"],
+                "compatible_remedy": [">=2.0.0"],
                 "security_flags": flags,
                 "status": "published",
             }
@@ -116,7 +116,7 @@ def main() -> None:
     p.add_argument("--output", type=Path, default=ROOT / "catalog.json")
     p.add_argument("--repo", default="AhmiDarrow/remedy-skills")
     p.add_argument("--github-urls", action="store_true")
-    p.add_argument("--release-tag", default="v1.0.0")
+    p.add_argument("--release-tag", default="v2.0.0")
     p.add_argument("--no-dist", action="store_true")
     p.add_argument("--skip-docs", action="store_true", help="Skip SKILLS.md / README list regen")
     args = p.parse_args()
@@ -127,7 +127,7 @@ def main() -> None:
         release_tag=args.release_tag,
         write_dist=not args.no_dist,
     )
-    args.output.write_text(json.dumps(cat, indent=2) + "\n", encoding="utf-8")
+    args.output.write_text(json.dumps(cat, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"Wrote {args.output} ({len(cat['skills'])} skills)")
     if not args.skip_docs:
         import subprocess

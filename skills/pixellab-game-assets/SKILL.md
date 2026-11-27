@@ -1,11 +1,11 @@
 ---
 name: pixellab-game-assets
-version: 1.0.0
+version: 1.0.1
 description: >
   Generate pixel art game assets with PixelLab: MCP server tools and REST API v2 —
   characters, animations, tilesets, map objects, UI, rotate/edit; job workflow and safe auth.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - pixel-art
@@ -17,11 +17,11 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - file_edit
-  - shell
-  - web_fetch
+  - read
+  - write
+  - edit
+  - bash
+  - web.fetch
 metadata:
   source: library
   library_id: pixellab-game-assets
@@ -51,6 +51,9 @@ the **MCP server** (AI assistants) and the **REST API v2** (scripts, CI, in-game
 
 ## Operating rules
 
+- **Ask the user before every delete** (name what will be removed) and **before any call that spends credits**, single calls included, unless they already approved that batch and its size.
+- Prompts, reference images and other inputs are **uploaded to a third-party service**. Say so before sending the user's own art or anything private, and wait for their yes.
+
 - **Never commit API tokens.** Use env vars or the client’s secret store.
 - Prefer **MCP** when an assistant is generating interactively; prefer **REST** for reproducible scripts and CI.
 - Treat generation as **paid/credit-consuming** — check balance before large batches; confirm with the user for bulk runs.
@@ -71,7 +74,8 @@ the **MCP server** (AI assistants) and the **REST API v2** (scripts, CI, in-game
 ```bash
 # Example shell (token from env — do not hardcode)
 export PIXELLAB_API_KEY="..."   # user supplies
-curl -sS -H "Authorization: Bearer $PIXELLAB_API_KEY" \
+# printf is a shell builtin, so the token never appears in another program's arguments
+printf 'Authorization: Bearer %s' "$PIXELLAB_API_KEY" | curl -sS -H @- \
   -H "Content-Type: application/json" \
   https://api.pixellab.ai/v2/...
 ```
@@ -96,13 +100,7 @@ HTTP MCP with bearer auth (shape used by common clients):
 }
 ```
 
-CLI-style (Claude Code example pattern):
-
-```bash
-# Replace YOUR_SECRET; do not commit the real value
-claude mcp add pixellab https://api.pixellab.ai/mcp -t http \
-  -H "Authorization: Bearer YOUR_SECRET"
-```
+Add this in your client's configuration file or secret store. Do not pass the token as a command-line argument: other users on the computer may see it, and shell history keeps it.
 
 After connect, tools may appear as `pixellab__<name>`, `mcp__pixellab__<name>`, or bare names depending on the client.
 

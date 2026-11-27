@@ -1,10 +1,10 @@
 ---
 name: game-design-document
-version: 1.0.0
+version: 1.0.1
 description: >
-  Draft or update a game design document: pillars, loop, progression, risk, and vertical slice scope.
+  Draft or repair a lean game design document with testable pillars, core loop, systems, vertical slice scope, risks and open questions. Use for a new concept or to reconcile conflicting design notes.
 author: Remedy Official
-license: LicenseRef-Proprietary
+license: Apache-2.0
 tags:
   - gaming
   - design
@@ -12,8 +12,11 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
+  - edit
+  - grep
+  - glob
 metadata:
   source: library
   library_id: game-design-document
@@ -25,26 +28,29 @@ metadata:
 # Game Design Document
 
 ## When to use
-New game concept, pitch, or reconciling a messy design.
+A game concept needs to be written down, or documents and build disagree.
 
 ## Steps
-1. Capture one-sentence pitch, audience, and platform constraints.
-2. Define 3 design pillars (must guide every feature).
-3. Core loop: minute-to-minute → session → meta progression.
-4. Systems list (combat, economy, narrative, multiplayer) with owners/status.
-5. Vertical slice: what is playable for the next milestone.
-6. Open questions and risks.
-7. Write or update `docs/gdd.md` (or path the user chooses).
+1. Read existing notes, prototypes and data. Use the project's file and format; otherwise propose `docs/gdd.md`. Ask for team size, time, budget and platforms before sizing scope.
+2. Write the pitch in one sentence, then audience, platform, session shape and what makes it worth choosing.
+3. Set about three pillars that can reject ideas. "Fun combat" cannot; "every fight is winnable without damage by reading tells" can. Give one example each of in and out.
+4. Describe the core loop with player verbs, decisions, rewards and what sends the player round again, then session and long-term goals.
+5. For each system give purpose, pillar served, key rules, dependencies, owner and status: proposed, prototyped or confirmed. Keep volatile numbers in data files and link them.
+6. Define the vertical slice: exact content and quality, the questions it answers, measurable pass criteria and what is deliberately absent.
+7. List non-goals, then risks, each with the cheapest test that would retire it and a date or decision owner.
+8. Surface contradictions between sources as questions instead of choosing silently. Add a short decision log.
 
-## Done when
-A teammate can build against the slice without guessing pillars.
+## Watch out for
+- Pages of lore and feature wish lists before anyone knows what the player does each minute.
+- A "vertical slice" that includes every system.
+- Presenting your inventions as agreed design; mark proposals.
+- Borrowed descriptions ("like game X") with no statement of which part is meant.
 
 ## Operating rules
-- Prefer read-only exploration before changing files.
-- Report commands and outcomes; do not invent results.
-- Ask before destructive, paid, or irreversible actions.
-- Never print or commit secrets, tokens, or private personal data.
-- Use generic tool names only (shell, file read/write, image tools already in Remedy).
+- Look before you change anything: read the real files, data or page first.
+- Report what you actually ran and saw; never invent results, sources or numbers.
+- Ask before destructive, paid, public or irreversible actions.
+- Never print, store or commit secrets or private personal data.
 
 ## Done when
-The user goal is met, or you list concrete blockers and the next safe step.
+A teammate can list the pillars, loop, slice contents and pass criteria from the document, and undecided items have owners.

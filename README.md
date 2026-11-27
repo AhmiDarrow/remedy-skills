@@ -35,29 +35,29 @@ Each skill says when to use it, the steps, tool hints, and what “done” looks
 
 <!-- BEGIN AUTO-SKILLS-LIST -->
 
-## What’s in the library (282 skills)
+## What’s in the library (830 skills)
 
-Snapshot of packs on this branch as of 2026-07-26. Descriptions and the full alphabetical list live in **[SKILLS.md](./SKILLS.md)**.
+Snapshot of packs on this branch as of 2026-11-27. Descriptions and the full alphabetical list live in **[SKILLS.md](./SKILLS.md)**.
 
 | Area | # | A few examples |
 |------|--:|----------------|
-| Backend & APIs | 22 | `api-client-sdk`, `api-contract-review`, `background-job-ui`, `backward-compat-api` · +18 more |
-| Content & writing | 35 | `blog-post-draft`, `blog-post-outline`, `case-study-write`, `changelog-user-facing` · +31 more |
-| Data | 2 | `csv-data-cleanup`, `encoding-fix` |
-| Design & UX | 45 | `a11y-design-review`, `brand-voice-guide`, `call-to-action-copy`, `cli-ux-polish` · +41 more |
-| Docs & process | 5 | `adr-write`, `bug-report-template`, `feature-toggle-cleanup`, `markdown-doc-structure` · +1 more |
-| Frontend | 7 | `bundle-size-check`, `css-specificity-debug`, `email-template-review`, `frontend-a11y` · +3 more |
-| Gaming | 36 | `boss-fight-design`, `combat-feel-tuning`, `game-accessibility`, `game-ai-behavior` · +32 more |
-| Git & release | 10 | `branch-hygiene`, `changelog-entry`, `cherry-pick-commit`, `codeowners-setup` · +6 more |
-| LLM & agents | 3 | `llm-cost-guardrails`, `rag-chunking`, `tool-use-spec` |
-| Ops & reliability | 14 | `backup-restore-drill`, `ci-pipeline-review`, `container-image-harden`, `container-orchestration-review` · +10 more |
+| Backend & APIs | 69 | `aggregate-invariant-design`, `api-client-sdk`, `api-contract-review`, `api-deprecation-sunset` · +65 more |
+| Content & writing | 74 | `app-listing-copy`, `audio-loudness-normalize`, `audio-transcription-local`, `author-voice-match` · +70 more |
+| Data | 57 | `ab-test-readout`, `ab-test-sample-size`, `anomaly-detection-thresholds`, `bookkeeping-month-close` · +53 more |
+| Design & UX | 31 | `cli-ux-polish`, `color-system`, `deceptive-pattern-audit`, `design-brief` · +27 more |
+| Docs & process | 65 | `adr-write`, `agent-repo-instructions`, `behavior-spec-from-code`, `breaking-news-verification` · +61 more |
+| Frontend | 80 | `a11y-design-review`, `accessible-combobox`, `accessible-drag-drop`, `anchored-popover-positioning` · +76 more |
+| Gaming | 44 | `boss-fight-design`, `combat-feel-tuning`, `game-accessibility`, `game-ai-behavior` · +40 more |
+| Git & release | 26 | `batch-pr-integration`, `branch-hygiene`, `change-hotspot-analysis`, `cherry-pick-commit` · +22 more |
+| LLM & agents | 21 | `agent-context-management`, `agent-loop-design`, `cloud-cost-spike-investigation`, `embedding-model-migration` · +17 more |
+| Ops & reliability | 72 | `alert-noise-reduction`, `app-store-submission-prep`, `artifact-promotion-pipeline`, `backup-restore-drill` · +68 more |
 | Other | 2 | `hello-library`, `license-compliance` |
-| Personal assistant | 54 | `accountability-partnership`, `boundary-setting`, `budget-snapshot`, `caregiver-checklist` · +50 more |
-| Security | 16 | `audit-log-design`, `auth-session-review`, `cors-review`, `dependency-audit` · +12 more |
-| Testing | 13 | `acceptance-criteria`, `benchmark-micro`, `browser-automation-safe`, `contract-test-api` · +9 more |
-| Tooling & languages | 18 | `algorithmic-complexity`, `cross-platform-paths`, `deadlock-debug`, `dev-environment-container` · +14 more |
+| Personal assistant | 117 | `account-recovery-readiness`, `after-death-admin-list`, `allergen-aware-guest-menu`, `appliance-repair-triage` · +113 more |
+| Security | 58 | `audit-log-design`, `auth-session-review`, `backup-strategy-design`, `bash-script-hardening` · +54 more |
+| Testing | 38 | `acceptance-criteria`, `benchmark-micro`, `browser-automation-safe`, `browser-download-retrieval` · +34 more |
+| Tooling & languages | 76 | `algorithmic-complexity`, `battery-sleep-current-reduction`, `bug-intake-triage`, `cmake-modern-target-refactor` · +72 more |
 
-**282 total** — skim the [full list](./SKILLS.md), or open **Skills → Library** in Remedy Desktop and install only what you need.
+**830 total** — skim the [full list](./SKILLS.md), or open **Skills → Library** in Remedy Desktop and install only what you need.
 
 <!-- END AUTO-SKILLS-LIST -->
 
@@ -65,8 +65,9 @@ Snapshot of packs on this branch as of 2026-07-26. Descriptions and the full alp
 
 ## Try it
 
-About a minute if you already have Remedy Desktop with Skills Library support
-(see the main [Remedy repo](https://github.com/AhmiDarrow/RemedyAI)):
+About a minute if you already have Remedy Desktop. If not, install Remedy 2.0 (a
+Go runtime with desktop and phone apps written in Rust) from the installers on the
+[RemedyAI releases page](https://github.com/AhmiDarrow/RemedyAI/releases/latest):
 
 1. Open **Skills** → **Library**
 2. Search or browse, then **Install** (lands in quarantine)
@@ -86,7 +87,9 @@ loads the full body when the task matches — so you don’t pay for a wall of
 instructions on every turn.
 
 Packs here are meant to be **usable**: concrete steps, tool hints, and safety
-notes (no secrets; confirm before anything destructive).
+notes (no secrets; confirm before anything destructive). Tool hints use Remedy 2.0
+tool names, such as `read`, `write`, `edit`, `bash`, `grep`, `web.search` and
+`web.fetch`.
 
 ---
 
@@ -129,7 +132,7 @@ python scripts/generate_skills_list.py   # SKILLS.md + README library section
 python scripts/build_catalog.py          # catalog.json (also refreshes the list)
 
 # Public release catalog (download URLs → this repo’s release assets):
-python scripts/build_catalog.py --github-urls --release-tag v1.0.0
+python scripts/build_catalog.py --github-urls --release-tag v2.0.0
 export REMEDY_SKILLS_SIGNING_KEY="..."   # base64 Ed25519 seed
 python scripts/sign_catalog.py
 ```
@@ -147,13 +150,7 @@ CI keeps the docs honest:
 ## License
 
 **Same as [RemedyAI](https://github.com/AhmiDarrow/RemedyAI):** the
-[RemedyAI Source-Available License](./LICENSE) (copyright Ahmi Darrow).
-
-| Who | Terms |
-|-----|--------|
-| **Solo / small indies** (&lt; $1M revenue **and** &lt; 20 FTE) | Free under LICENSE |
-| **Personal / education / research** | Free |
-| **Larger orgs, SaaS hosting, commercial resale** | Written commercial license — see [COMMERCIAL.md](./COMMERCIAL.md) |
+[Apache License 2.0](./LICENSE) (copyright Ahmi Darrow; see [NOTICE](./NOTICE)).
 
 Skill packs and catalog scripts in this repo are covered by that LICENSE unless
 a pack’s frontmatter names a different license. Remedy the product is documented
