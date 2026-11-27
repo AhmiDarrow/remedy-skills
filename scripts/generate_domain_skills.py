@@ -43,6 +43,8 @@ def write_skill(name: str, desc: str, tags: list[str], tools: list[str], body: s
     if name in RESERVED:
         return
     d = ROOT / name
+    if (d / "SKILL.md").exists():  # skills/ is the source of truth
+        return
     d.mkdir(parents=True, exist_ok=True)
     tags_y = "\n".join(f"  - {t}" for t in tags)
     tools_y = "\n".join(f"  - {t}" for t in tools)
