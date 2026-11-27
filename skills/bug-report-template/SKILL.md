@@ -1,6 +1,6 @@
 ---
 name: bug-report-template
-version: 1.0.0
+version: 1.0.1
 description: >
   Turn a vague bug into a reproducible report: environment, steps, expected/actual.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: bug-report-template

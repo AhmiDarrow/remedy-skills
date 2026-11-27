@@ -1,6 +1,6 @@
 ---
 name: rebase-onto-main
-version: 1.0.0
+version: 1.0.1
 description: >
   Update the current branch onto latest main/master via rebase or merge with conflict handling.
 author: Remedy Official
@@ -10,7 +10,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
+  - bash
 metadata:
   source: library
   library_id: rebase-onto-main

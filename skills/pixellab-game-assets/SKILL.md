@@ -1,6 +1,6 @@
 ---
 name: pixellab-game-assets
-version: 1.0.0
+version: 1.0.1
 description: >
   Generate pixel art game assets with PixelLab: MCP server tools and REST API v2 —
   characters, animations, tilesets, map objects, UI, rotate/edit; job workflow and safe auth.
@@ -17,11 +17,11 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - file_edit
-  - shell
-  - web_fetch
+  - read
+  - write
+  - edit
+  - bash
+  - web.fetch
 metadata:
   source: library
   library_id: pixellab-game-assets

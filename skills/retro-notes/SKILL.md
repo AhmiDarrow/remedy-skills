@@ -1,6 +1,6 @@
 ---
 name: retro-notes
-version: 1.0.0
+version: 1.0.1
 description: >
   Run a lightweight blameless retro and produce concrete action items.
 author: Remedy Official
@@ -10,7 +10,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_write
+  - write
 metadata:
   source: library
   library_id: retro-notes

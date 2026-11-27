@@ -1,6 +1,6 @@
 ---
 name: conventional-commits
-version: 1.0.0
+version: 1.0.1
 description: >
   Propose or write Conventional Commit messages (feat/fix/docs/chore) matching the diff.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: conventional-commits

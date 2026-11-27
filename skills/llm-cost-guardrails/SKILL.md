@@ -1,6 +1,6 @@
 ---
 name: llm-cost-guardrails
-version: 1.0.0
+version: 1.0.1
 description: >
   Add token/cost/latency guardrails and sensible model routing.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: llm-cost-guardrails

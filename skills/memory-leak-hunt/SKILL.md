@@ -1,6 +1,6 @@
 ---
 name: memory-leak-hunt
-version: 1.0.0
+version: 1.0.1
 description: >
   Find memory growth in long-running services via profiles and retained allocations.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: memory-leak-hunt

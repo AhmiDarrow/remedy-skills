@@ -1,6 +1,6 @@
 ---
 name: owasp-web-checklist
-version: 1.0.0
+version: 1.0.1
 description: >
   Security-review a web change against practical OWASP-style controls (injection, XSS, authz, CSRF, SSRF).
 author: Remedy Official
@@ -11,7 +11,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: owasp-web-checklist
@@ -22,7 +22,7 @@ metadata:
 # Owasp Web Checklist
 
 ## Checklist
-1. Parameterized queries / no shell=True with user input.
+1. Parameterized queries / no shell-enabled subprocess calls with user input.
 2. XSS: encode output; audit HTML sinks.
 3. Cookie flags for sessions (HttpOnly, Secure, SameSite).
 4. Server-side authz on every sensitive action.

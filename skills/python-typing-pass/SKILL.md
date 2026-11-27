@@ -1,6 +1,6 @@
 ---
 name: python-typing-pass
-version: 1.0.0
+version: 1.0.1
 description: >
   Raise typing quality on selected Python modules until mypy/pyright is clean.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: python-typing-pass

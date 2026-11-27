@@ -1,6 +1,6 @@
 ---
 name: email-template-review
-version: 1.0.0
+version: 1.0.1
 description: >
   Review HTML emails for client safety, plain-text parts, and injection.
 author: Remedy Official
@@ -11,7 +11,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: email-template-review

@@ -1,6 +1,6 @@
 ---
 name: websocket-debug
-version: 1.0.0
+version: 1.0.1
 description: >
   Diagnose WebSocket handshake, auth, ping/pong, and reconnect storms.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - bash_exec
+  - read
+  - bash
 metadata:
   source: library
   library_id: websocket-debug

@@ -1,6 +1,6 @@
 ---
 name: cache-invalidation
-version: 1.0.0
+version: 1.0.1
 description: >
   Design cache keys and invalidation to prevent stale reads and stampedes.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: cache-invalidation

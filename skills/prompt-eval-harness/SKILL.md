@@ -1,6 +1,6 @@
 ---
 name: prompt-eval-harness
-version: 1.0.0
+version: 1.0.1
 description: >
   Build a small regression suite for prompts/agent behaviors with deterministic checks.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: prompt-eval-harness

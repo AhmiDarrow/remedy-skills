@@ -1,6 +1,6 @@
 ---
 name: container-image-harden
-version: 1.0.0
+version: 1.0.1
 description: >
   Write or harden container image recipes: multi-stage, non-root, pin bases, no secrets in layers.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: container-image-harden

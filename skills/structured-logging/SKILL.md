@@ -1,6 +1,6 @@
 ---
 name: structured-logging
-version: 1.0.0
+version: 1.0.1
 description: >
   Introduce structured logging with levels, correlation IDs, and secret redaction.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: structured-logging

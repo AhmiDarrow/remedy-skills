@@ -1,6 +1,6 @@
 ---
 name: sql-query-review
-version: 1.0.0
+version: 1.0.1
 description: >
   Review SQL/ORM usage for N+1, injection, and missing indexes.
 author: Remedy Official
@@ -12,8 +12,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - bash_exec
+  - read
+  - bash
 metadata:
   source: library
   library_id: sql-query-review

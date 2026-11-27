@@ -1,6 +1,6 @@
 ---
 name: acceptance-criteria
-version: 1.0.0
+version: 1.0.1
 description: >
   Write testable acceptance criteria for a feature or bugfix.
 author: Remedy Official
@@ -11,7 +11,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: acceptance-criteria

@@ -1,6 +1,6 @@
 ---
 name: deadlock-debug
-version: 1.0.0
+version: 1.0.1
 description: >
   Debug deadlocks via stack dumps and lock-order fixes.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - bash_exec
+  - read
+  - bash
 metadata:
   source: library
   library_id: deadlock-debug

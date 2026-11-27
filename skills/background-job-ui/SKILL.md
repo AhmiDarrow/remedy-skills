@@ -1,6 +1,6 @@
 ---
 name: background-job-ui
-version: 1.0.0
+version: 1.0.1
 description: >
   Expose long-running job progress/status to users with authz and safe errors.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: background-job-ui

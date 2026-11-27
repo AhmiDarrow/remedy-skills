@@ -1,6 +1,6 @@
 ---
 name: api-contract-review
-version: 1.0.0
+version: 1.0.1
 description: >
   Review HTTP APIs for validation, authz, status codes, pagination, and error shape consistency.
 author: Remedy Official
@@ -11,7 +11,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: api-contract-review

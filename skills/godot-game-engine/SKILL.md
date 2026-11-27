@@ -1,6 +1,6 @@
 ---
 name: godot-game-engine
-version: 1.0.0
+version: 1.0.1
 description: >
   Build and debug games in Godot Engine 4.7.1: project layout, scenes/nodes,
   typed GDScript, signals, resources, input, physics, export, and common pitfalls.
@@ -15,11 +15,11 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - file_edit
-  - repo_search
-  - shell
+  - read
+  - write
+  - edit
+  - grep
+  - bash
 metadata:
   source: library
   library_id: godot-game-engine

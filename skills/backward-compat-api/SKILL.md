@@ -1,6 +1,6 @@
 ---
 name: backward-compat-api
-version: 1.0.0
+version: 1.0.1
 description: >
   Plan backward-compatible API evolution and deprecation windows.
 author: Remedy Official
@@ -11,7 +11,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: backward-compat-api

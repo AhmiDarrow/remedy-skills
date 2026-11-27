@@ -1,6 +1,6 @@
 ---
 name: browser-automation-safe
-version: 1.0.0
+version: 1.0.1
 description: >
   Automate browser checks with browser-test best practices (stable selectors, no fixed sleeps).
 author: Remedy Official
@@ -12,9 +12,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
-  - file_write
+  - bash
+  - read
+  - write
 metadata:
   source: library
   library_id: browser-automation-safe

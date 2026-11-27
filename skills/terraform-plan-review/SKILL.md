@@ -1,6 +1,6 @@
 ---
 name: terraform-plan-review
-version: 1.0.0
+version: 1.0.1
 description: >
   Review infrastructure-as-code plans for destroys, public exposure, and IAM blast radius before apply.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: terraform-plan-review

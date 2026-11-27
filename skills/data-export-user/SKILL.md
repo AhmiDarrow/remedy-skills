@@ -1,6 +1,6 @@
 ---
 name: data-export-user
-version: 1.0.0
+version: 1.0.1
 description: >
   Implement authenticated user data export with async processing if large.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: data-export-user

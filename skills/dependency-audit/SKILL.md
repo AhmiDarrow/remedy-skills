@@ -1,6 +1,6 @@
 ---
 name: dependency-audit
-version: 1.0.0
+version: 1.0.1
 description: >
   Audit project dependencies for known vulnerabilities and outdated high-risk packages.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: dependency-audit

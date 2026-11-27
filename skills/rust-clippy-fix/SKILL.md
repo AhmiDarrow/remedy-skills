@@ -1,6 +1,6 @@
 ---
 name: rust-clippy-fix
-version: 1.0.0
+version: 1.0.1
 description: >
   Run Clippy and fix correctness-oriented lints; re-test.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
-  - file_write
+  - bash
+  - read
+  - write
 metadata:
   source: library
   library_id: rust-clippy-fix

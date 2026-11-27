@@ -1,6 +1,6 @@
 ---
 name: webhook-verify
-version: 1.0.0
+version: 1.0.1
 description: >
   Implement or review webhook receivers: signature verification, raw body, replay protection, idempotency.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: webhook-verify

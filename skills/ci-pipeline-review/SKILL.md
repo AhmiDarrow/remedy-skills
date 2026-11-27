@@ -1,6 +1,6 @@
 ---
 name: ci-pipeline-review
-version: 1.0.0
+version: 1.0.1
 description: >
   Review CI pipelines for caching, secret hygiene, required checks, and runtime.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: ci-pipeline-review

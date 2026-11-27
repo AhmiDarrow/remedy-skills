@@ -1,6 +1,6 @@
 ---
 name: cherry-pick-commit
-version: 1.0.0
+version: 1.0.1
 description: >
   Cherry-pick specific commits onto the current branch with careful conflict resolution.
 author: Remedy Official
@@ -10,7 +10,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
+  - bash
 metadata:
   source: library
   library_id: cherry-pick-commit

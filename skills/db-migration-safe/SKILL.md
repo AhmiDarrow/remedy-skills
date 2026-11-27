@@ -1,6 +1,6 @@
 ---
 name: db-migration-safe
-version: 1.0.0
+version: 1.0.1
 description: >
   Write or review DB migrations using expand/contract safety and rollback notes.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: db-migration-safe

@@ -1,6 +1,6 @@
 ---
 name: cross-platform-paths
-version: 1.0.0
+version: 1.0.1
 description: >
   Fix Windows/macOS/Linux path bugs using pathlib and safe joins.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: cross-platform-paths

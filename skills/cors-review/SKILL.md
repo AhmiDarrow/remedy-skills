@@ -1,6 +1,6 @@
 ---
 name: cors-review
-version: 1.0.0
+version: 1.0.1
 description: >
   Review CORS settings for overly broad origins and credentialed cross-origin risks.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: cors-review

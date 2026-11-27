@@ -1,6 +1,6 @@
 ---
 name: visual-regression-setup
-version: 1.0.0
+version: 1.0.1
 description: >
   Add a small visual regression set for critical screens with stable snapshots.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: visual-regression-setup

@@ -1,6 +1,6 @@
 ---
 name: encoding-fix
-version: 1.0.0
+version: 1.0.1
 description: >
   Fix Unicode/encoding issues (UTF-8, BOM, mislabeled files).
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: encoding-fix

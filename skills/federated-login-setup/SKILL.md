@@ -1,6 +1,6 @@
 ---
 name: federated-login-setup
-version: 1.0.0
+version: 1.0.1
 description: >
   Configure OAuth/OIDC clients correctly (PKCE, redirects, scopes, token storage).
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: federated-login-setup

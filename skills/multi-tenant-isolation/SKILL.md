@@ -1,6 +1,6 @@
 ---
 name: multi-tenant-isolation
-version: 1.0.0
+version: 1.0.1
 description: >
   Audit multi-tenant isolation for cross-tenant data leaks.
 author: Remedy Official
@@ -11,7 +11,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: multi-tenant-isolation

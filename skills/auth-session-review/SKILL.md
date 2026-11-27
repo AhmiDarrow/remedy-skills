@@ -1,6 +1,6 @@
 ---
 name: auth-session-review
-version: 1.0.0
+version: 1.0.1
 description: >
   Review login, session, JWT, or OAuth handling for common authentication flaws.
 author: Remedy Official
@@ -11,7 +11,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: auth-session-review

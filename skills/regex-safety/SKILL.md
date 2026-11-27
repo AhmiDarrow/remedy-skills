@@ -1,6 +1,6 @@
 ---
 name: regex-safety
-version: 1.0.0
+version: 1.0.1
 description: >
   Review regexes for ReDoS and correctness on untrusted input.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: regex-safety

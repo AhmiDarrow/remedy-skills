@@ -1,6 +1,6 @@
 ---
 name: ts-strict-migration
-version: 1.0.0
+version: 1.0.1
 description: >
   Incrementally enable TypeScript strictness without a big-bang freeze.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: ts-strict-migration

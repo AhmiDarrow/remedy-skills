@@ -1,6 +1,6 @@
 ---
 name: incident-postmortem
-version: 1.0.0
+version: 1.0.1
 description: >
   Write a blameless postmortem with timeline, root cause, and owned actions.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_write
-  - file_read
+  - write
+  - read
 metadata:
   source: library
   library_id: incident-postmortem

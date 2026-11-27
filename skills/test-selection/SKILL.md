@@ -1,6 +1,6 @@
 ---
 name: test-selection
-version: 1.0.0
+version: 1.0.1
 description: >
   Select and run the smallest high-value tests for the current change set.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: test-selection

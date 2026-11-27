@@ -1,6 +1,6 @@
 ---
 name: idempotent-api
-version: 1.0.0
+version: 1.0.1
 description: >
   Make a mutating endpoint safely retryable with idempotency keys.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: idempotent-api

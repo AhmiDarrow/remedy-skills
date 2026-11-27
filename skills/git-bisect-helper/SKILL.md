@@ -1,6 +1,6 @@
 ---
 name: git-bisect-helper
-version: 1.0.0
+version: 1.0.1
 description: >
   Drive git bisect with a clear good/bad test command to find a regression-introducing commit.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: git-bisect-helper

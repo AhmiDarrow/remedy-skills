@@ -1,6 +1,6 @@
 ---
 name: bundle-size-check
-version: 1.0.0
+version: 1.0.1
 description: >
   Find JS bundle size regressions and propose splits or dependency cuts.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: bundle-size-check

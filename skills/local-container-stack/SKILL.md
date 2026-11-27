@@ -1,6 +1,6 @@
 ---
 name: local-container-stack
-version: 1.0.0
+version: 1.0.1
 description: >
   Provide local multi-service containers for local dependencies with healthchecks and sane ports.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: local-container-stack

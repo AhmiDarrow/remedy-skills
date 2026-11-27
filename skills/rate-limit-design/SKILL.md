@@ -1,6 +1,6 @@
 ---
 name: rate-limit-design
-version: 1.0.0
+version: 1.0.1
 description: >
   Design rate limits for public/auth endpoints with clear 429 behavior.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: rate-limit-design

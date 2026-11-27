@@ -1,6 +1,6 @@
 ---
 name: tool-use-spec
-version: 1.0.0
+version: 1.0.1
 description: >
   Specify safe tool/function contracts: schemas, side effects, confirmations, timeouts.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: tool-use-spec

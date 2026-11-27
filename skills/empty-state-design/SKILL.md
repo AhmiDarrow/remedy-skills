@@ -1,6 +1,6 @@
 ---
 name: empty-state-design
-version: 1.0.0
+version: 1.0.1
 description: >
   Add clear empty/error/no-results states with next actions.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: empty-state-design

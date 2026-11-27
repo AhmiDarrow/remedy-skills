@@ -1,6 +1,6 @@
 ---
 name: playtest-protocol
-version: 1.0.0
+version: 1.0.1
 description: >
   Run a structured playtest: goals, tasks, observation notes, and debrief actions.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: playtest-protocol
@@ -36,7 +36,7 @@ metadata:
 - Report commands and outcomes; do not invent results.
 - Ask before destructive, paid, or irreversible actions.
 - Never print or commit secrets, tokens, or private personal data.
-- Use generic tool names only (shell, file read/write, image tools already in Remedy).
+- Use Remedy's tool names (`read`, `write`, `bash`); do not assume a tool that is not in your tool list.
 
 ## Done when
 The user goal is met, or you list concrete blockers and the next safe step.

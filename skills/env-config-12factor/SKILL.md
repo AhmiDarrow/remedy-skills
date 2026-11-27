@@ -1,6 +1,6 @@
 ---
 name: env-config-12factor
-version: 1.0.0
+version: 1.0.1
 description: >
   Refactor configuration to env-based 12-factor style with validated startup.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: env-config-12factor

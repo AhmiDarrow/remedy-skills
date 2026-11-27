@@ -1,6 +1,6 @@
 ---
 name: algorithmic-complexity
-version: 1.0.0
+version: 1.0.1
 description: >
   Find accidental quadratic patterns and propose better data structures.
 author: Remedy Official
@@ -10,7 +10,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: algorithmic-complexity

@@ -1,6 +1,6 @@
 ---
 name: react-performance
-version: 1.0.0
+version: 1.0.1
 description: >
   Fix common React performance issues after identifying hot components.
 author: Remedy Official
@@ -12,8 +12,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: react-performance

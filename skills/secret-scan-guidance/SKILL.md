@@ -1,6 +1,6 @@
 ---
 name: secret-scan-guidance
-version: 1.0.0
+version: 1.0.1
 description: >
   Find likely leaked secrets in the tree and guide rotation without printing secret values.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: secret-scan-guidance

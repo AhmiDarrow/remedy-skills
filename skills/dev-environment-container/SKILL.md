@@ -1,6 +1,6 @@
 ---
 name: dev-environment-container
-version: 1.0.0
+version: 1.0.1
 description: >
   Add a dev environment container for reproducible contributor environments.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: dev-environment-container

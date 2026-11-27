@@ -1,6 +1,6 @@
 ---
 name: license-compliance
-version: 1.0.0
+version: 1.0.1
 description: >
   Summarize third-party licenses and flag strong copyleft risk for distribution.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: license-compliance

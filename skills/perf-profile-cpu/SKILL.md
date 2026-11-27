@@ -1,6 +1,6 @@
 ---
 name: perf-profile-cpu
-version: 1.0.0
+version: 1.0.1
 description: >
   Capture and interpret a CPU profile to find hot functions before optimizing.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: perf-profile-cpu

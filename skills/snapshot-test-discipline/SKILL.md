@@ -1,6 +1,6 @@
 ---
 name: snapshot-test-discipline
-version: 1.0.0
+version: 1.0.1
 description: >
   Tame snapshot tests: reduce scope, review diffs, avoid golden files that hide bugs.
 author: Remedy Official
@@ -10,8 +10,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: snapshot-test-discipline

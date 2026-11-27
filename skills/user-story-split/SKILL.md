@@ -1,6 +1,6 @@
 ---
 name: user-story-split
-version: 1.0.0
+version: 1.0.1
 description: >
   Split an epic into vertical, testable user stories with acceptance criteria.
 author: Remedy Official
@@ -11,7 +11,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: user-story-split

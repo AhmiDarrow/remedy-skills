@@ -1,6 +1,6 @@
 ---
 name: docs-api-examples
-version: 1.0.0
+version: 1.0.1
 description: >
   Add runnable request/response examples to API docs for the hardest endpoints.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: docs-api-examples

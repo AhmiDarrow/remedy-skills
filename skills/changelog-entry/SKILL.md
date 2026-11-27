@@ -1,6 +1,6 @@
 ---
 name: changelog-entry
-version: 1.0.0
+version: 1.0.1
 description: >
   Author a Keep-a-Changelog entry from commits/diff for a version bump or release.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
-  - file_write
+  - bash
+  - read
+  - write
 metadata:
   source: library
   library_id: changelog-entry

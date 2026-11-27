@@ -1,6 +1,6 @@
 ---
 name: design-token-sync
-version: 1.0.0
+version: 1.0.1
 description: >
   Replace one-off colors/spacing with design tokens / CSS variables already in the project.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: design-token-sync

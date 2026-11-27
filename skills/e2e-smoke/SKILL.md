@@ -1,6 +1,6 @@
 ---
 name: e2e-smoke
-version: 1.0.0
+version: 1.0.1
 description: >
   Define or run a short end-to-end smoke path for the critical user journey.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: e2e-smoke

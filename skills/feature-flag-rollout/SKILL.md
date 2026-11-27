@@ -1,6 +1,6 @@
 ---
 name: feature-flag-rollout
-version: 1.0.0
+version: 1.0.1
 description: >
   Add a feature flag with default-off rollout, metrics, and removal plan.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: feature-flag-rollout

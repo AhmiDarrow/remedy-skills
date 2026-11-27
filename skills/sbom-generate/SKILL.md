@@ -1,6 +1,6 @@
 ---
 name: sbom-generate
-version: 1.0.0
+version: 1.0.1
 description: >
   Generate a Software Bill of Materials (CycloneDX/SPDX) using available tooling.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: sbom-generate

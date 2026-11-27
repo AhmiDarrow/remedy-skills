@@ -1,6 +1,6 @@
 ---
 name: markdown-doc-structure
-version: 1.0.0
+version: 1.0.1
 description: >
   Restructure Markdown documentation for clear heading hierarchy and working links.
 author: Remedy Official
@@ -10,8 +10,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: markdown-doc-structure

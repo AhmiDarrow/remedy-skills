@@ -1,6 +1,6 @@
 ---
 name: http-debugging
-version: 1.0.0
+version: 1.0.1
 description: >
   Debug HTTP failures with curl -v, status/headers, and TLS basics (redact auth).
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
+  - bash
+  - read
 metadata:
   source: library
   library_id: http-debugging

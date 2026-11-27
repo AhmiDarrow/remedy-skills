@@ -1,6 +1,6 @@
 ---
 name: migration-data-backfill
-version: 1.0.0
+version: 1.0.1
 description: >
   Plan batched data backfills that won't lock production tables.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: migration-data-backfill

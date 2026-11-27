@@ -1,6 +1,6 @@
 ---
 name: openapi-sync
-version: 1.0.0
+version: 1.0.1
 description: >
   Regenerate or manually sync OpenAPI with implemented routes and flag breaking changes.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
-  - file_write
+  - bash
+  - read
+  - write
 metadata:
   source: library
   library_id: openapi-sync

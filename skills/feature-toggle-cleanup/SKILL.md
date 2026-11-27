@@ -1,6 +1,6 @@
 ---
 name: feature-toggle-cleanup
-version: 1.0.0
+version: 1.0.1
 description: >
   Find stale feature flags and remove dead code paths safely.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: feature-toggle-cleanup

@@ -1,6 +1,6 @@
 ---
 name: branch-hygiene
-version: 1.0.0
+version: 1.0.1
 description: >
   Prune merged local branches, fetch --prune, and name a clean branch for the next task.
 author: Remedy Official
@@ -10,7 +10,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
+  - bash
 metadata:
   source: library
   library_id: branch-hygiene

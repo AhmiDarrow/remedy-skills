@@ -1,6 +1,6 @@
 ---
 name: cli-ux-polish
-version: 1.0.0
+version: 1.0.1
 description: >
   Polish CLI help, flags, exit codes, and non-interactive CI mode.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: cli-ux-polish

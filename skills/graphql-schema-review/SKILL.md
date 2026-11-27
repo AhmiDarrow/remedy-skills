@@ -1,6 +1,6 @@
 ---
 name: graphql-schema-review
-version: 1.0.0
+version: 1.0.1
 description: >
   Review GraphQL schemas/resolvers for authz, N+1, pagination, and deprecations.
 author: Remedy Official
@@ -11,7 +11,7 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
+  - read
 metadata:
   source: library
   library_id: graphql-schema-review

@@ -1,6 +1,6 @@
 ---
 name: load-test-plan
-version: 1.0.0
+version: 1.0.1
 description: >
   Design and run a minimal load test on critical endpoints with clear stop conditions.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: load-test-plan

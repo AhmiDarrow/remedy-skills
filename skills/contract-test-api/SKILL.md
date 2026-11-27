@@ -1,6 +1,6 @@
 ---
 name: contract-test-api
-version: 1.0.0
+version: 1.0.1
 description: >
   Add consumer/provider contract tests so API changes don't silently break clients.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: contract-test-api

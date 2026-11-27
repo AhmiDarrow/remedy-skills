@@ -1,6 +1,6 @@
 ---
 name: datetime-timezone
-version: 1.0.0
+version: 1.0.1
 description: >
   Fix datetime bugs by storing UTC and converting only at the edge.
 author: Remedy Official
@@ -11,8 +11,8 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
+  - read
+  - write
 metadata:
   source: library
   library_id: datetime-timezone

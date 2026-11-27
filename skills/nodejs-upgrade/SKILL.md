@@ -1,6 +1,6 @@
 ---
 name: nodejs-upgrade
-version: 1.0.0
+version: 1.0.1
 description: >
   Plan and execute a Node.js runtime upgrade with CI and dependency checks.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - bash_exec
-  - file_read
-  - file_write
+  - bash
+  - read
+  - write
 metadata:
   source: library
   library_id: nodejs-upgrade

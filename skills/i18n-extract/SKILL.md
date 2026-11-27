@@ -1,6 +1,6 @@
 ---
 name: i18n-extract
-version: 1.0.0
+version: 1.0.1
 description: >
   Extract UI strings into i18n catalogs and find missing locale keys.
 author: Remedy Official
@@ -11,9 +11,9 @@ tags:
 kind: native
 status: discovered
 tools:
-  - file_read
-  - file_write
-  - bash_exec
+  - read
+  - write
+  - bash
 metadata:
   source: library
   library_id: i18n-extract
