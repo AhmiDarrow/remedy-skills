@@ -2,7 +2,7 @@
 name: caregiver-checklist
 version: 1.0.1
 description: >
-  Build a caregiver checklist for appointments, meds schedules placeholders, and notes (non-clinical).
+  Build a practical care sheet and handover log covering routine, contacts, appointments and changes to report. Use when sharing the care of a child, relative or dependent adult among helpers.
 author: Remedy Official
 license: Apache-2.0
 tags:
@@ -23,22 +23,31 @@ metadata:
 
 # Caregiver Checklist
 
-## Disclaimer
-Not medical advice; follow clinician instructions.
+## When to use
+One or more people need to look after someone consistently. This organises information and is not medical advice; follow the care instructions given by clinicians.
 
 ## Steps
-1. Daily routine template.
-2. Appointment log.
-3. Meds schedule placeholder (user fills).
-4. Observation notes.
-5. Questions for clinicians.
+1. Ask who is cared for, who helps and when, what the person can do alone, and what they want. Involve them in decisions wherever possible and respect their consent about what is shared.
+2. Put an urgent page first: emergency number, address and entry instructions, allergies, key contacts, and where care plans and medical decision documents are kept. Copy any "call for help if" signs only from clinicians' written instructions; ask for them if missing.
+3. Write the day by time block: meals and food restrictions, washing, toileting, mobility, activity, rest. For each say what help is needed and what the person prefers to do themselves.
+4. Note communication, comfort, what causes distress and what calms them.
+5. Describe equipment and moving help as instructed by the professional who assessed it. If lifting is needed and nobody has been shown how, flag that for assessment.
+6. Refer to a separately kept, verified medicine list and leave a column for what was given, time and initials. Do not fill in doses or advise on a missed one; the helper contacts a pharmacist or clinician.
+7. Add an appointment log with date, reason, transport, questions to ask and follow-up.
+8. Create a handover note: what happened, eating and drinking, observed changes in plain facts, tasks outstanding and who is next.
+9. Include backup cover if the main carer is unavailable, breaks for the carer, and local support services to look into.
+
+## Watch out for
+- Several versions circulating; date the sheet and name who updates it.
+- Interpretations ("seemed confused because...") in place of observations.
+- Door codes, identity numbers and health details shared more widely than needed.
+- Recording a task as done before it was.
 
 ## Operating rules
-- Prefer read-only exploration before changing files.
-- Report commands and outcomes; do not invent results.
-- Ask before destructive, paid, or irreversible actions.
-- Never print or commit secrets, tokens, or private personal data.
-- Use Remedy's tool names (`read`, `write`, `bash`); do not assume a tool that is not in your tool list.
+- Look before you change anything: read the real files, data or page first.
+- Report what you actually ran and saw; never invent results, sources or numbers.
+- Ask before destructive, paid, public or irreversible actions.
+- Never print, store or commit secrets or private personal data.
 
 ## Done when
-The user goal is met, or you list concrete blockers and the next safe step.
+A new helper can follow a normal day, find urgent information at once and leave a handover, with unconfirmed instructions clearly marked.

@@ -2,7 +2,7 @@
 name: travel-itinerary
 version: 1.0.1
 description: >
-  Build a travel itinerary: logistics, buffers, offline notes, packing constraints.
+  Build a trip itinerary with verified transport and opening times, realistic transfers, time zones, buffers and offline details. Use when planning a holiday or work trip, or checking that bookings fit together.
 author: Remedy Official
 license: Apache-2.0
 tags:
@@ -13,6 +13,9 @@ status: discovered
 tools:
   - read
   - write
+  - web.search
+  - web.fetch
+  - calendar.create_event
 metadata:
   source: library
   library_id: travel-itinerary
@@ -23,20 +26,30 @@ metadata:
 
 # Travel Itinerary
 
+## When to use
+Travel, lodging and activities need to fit into one workable plan.
+
 ## Steps
-1. Dates, travelers, budget band.
-2. Transport and lodging blocks.
-3. Day plans with buffers.
-4. Booking reference placeholders.
-5. Offline critical info.
-6. Contingency (delays).
+1. Get dates, travellers, mobility and diet needs, budget, pace, must-dos and what is already booked.
+2. Check entry-critical items early with official sources: documents, visas, health requirements and travel advice. Flag unconfirmed ones.
+3. Lay out fixed anchors first with local date, time, time zone and terminal or station. Check overnight arrivals so the first night is booked for the right date.
+4. For each transfer, estimate door to door: exit, baggage, immigration, transport, check-in cutoffs. Note whether connections are on one ticket; separate tickets may leave the traveller bearing a missed link.
+5. Group sights by area. Plan one main thing per half day, rest after long journeys and at least one loose block.
+6. Verify opening days, last entry, seasonal and holiday closures, and advance booking needs. Record link and date checked.
+7. Mark each item booked, to book or optional, with cancellation deadline and cost estimate.
+8. Give fallbacks for delayed arrival, weather and sold-out items, and the last viable transport each night.
+9. Produce an offline copy with addresses in the local script where useful, emergency numbers, insurer and lodging contacts. Keep passport and card numbers out. The user makes bookings and payments.
+
+## Watch out for
+- Travel times taken from straight-line distance or off-peak conditions.
+- Late arrival after reception closes.
+- Presenting prices or schedules not checked live as confirmed.
 
 ## Operating rules
-- Prefer read-only exploration before changing files.
-- Report commands and outcomes; do not invent results.
-- Ask before destructive, paid, or irreversible actions.
-- Never print or commit secrets, tokens, or private personal data.
-- Use Remedy's tool names (`read`, `write`, `bash`); do not assume a tool that is not in your tool list.
+- Look before you change anything: read the real files, data or page first.
+- Report what you actually ran and saw; never invent results, sources or numbers.
+- Ask before destructive, paid, public or irreversible actions.
+- Never print, store or commit secrets or private personal data.
 
 ## Done when
-The user goal is met, or you list concrete blockers and the next safe step.
+Anchors do not conflict across time zones, transfers include buffers, items have a status, and unverified facts are marked in an offline-ready plan.
